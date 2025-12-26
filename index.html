@@ -1,0 +1,3060 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PKK RW. 015 PGC-1 | POSBINDU CENDRAWASIH 1</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+        
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .glass-card {
+            background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(219,234,254,0.8) 100%);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.5);
+        }
+
+        .btn-3d {
+            background: linear-gradient(145deg, #3b82f6, #1d4ed8);
+            box-shadow: 0 6px 0 #1e40af, 0 8px 10px rgba(0,0,0,0.3);
+            transition: all 0.15s ease;
+        }
+
+        .btn-3d:hover {
+            transform: translateY(2px);
+            box-shadow: 0 4px 0 #1e40af, 0 6px 8px rgba(0,0,0,0.3);
+        }
+
+        .btn-3d:active {
+            transform: translateY(4px);
+            box-shadow: 0 2px 0 #1e40af, 0 4px 6px rgba(0,0,0,0.3);
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #60a5fa 100%);
+        }
+
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.3);
+        }
+
+        .nav-link {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #3b82f6;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .table-row-kk {
+            color: #2563eb;
+            font-weight: 500;
+        }
+
+        .pyramid-bar {
+            transition: all 0.3s ease;
+        }
+
+        .pyramid-bar:hover {
+            filter: brightness(1.1);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fadeInUp {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+            20%, 40%, 60%, 80% { transform: translateX(5px); }
+        }
+
+        .animate-shake {
+            animation: shake 0.5s ease-in-out;
+        }
+
+        .btn-3d-green {
+            background: linear-gradient(145deg, #22c55e, #16a34a);
+            box-shadow: 0 6px 0 #15803d, 0 8px 10px rgba(0,0,0,0.3);
+            transition: all 0.15s ease;
+        }
+
+        .btn-3d-green:hover {
+            transform: translateY(2px);
+            box-shadow: 0 4px 0 #15803d, 0 6px 8px rgba(0,0,0,0.3);
+        }
+
+        .btn-3d-green:active {
+            transform: translateY(4px);
+            box-shadow: 0 2px 0 #15803d, 0 4px 6px rgba(0,0,0,0.3);
+        }
+
+        .btn-3d-red {
+            background: linear-gradient(145deg, #ef4444, #dc2626);
+            box-shadow: 0 6px 0 #b91c1c, 0 8px 10px rgba(0,0,0,0.3);
+            transition: all 0.15s ease;
+        }
+
+        .btn-3d-red:hover {
+            transform: translateY(2px);
+            box-shadow: 0 4px 0 #b91c1c, 0 6px 8px rgba(0,0,0,0.3);
+        }
+
+        .btn-3d-red:active {
+            transform: translateY(4px);
+            box-shadow: 0 2px 0 #b91c1c, 0 4px 6px rgba(0,0,0,0.3);
+        }
+
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+            #printArea, #printArea * {
+                visibility: visible;
+            }
+            #printArea {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                padding: 20px;
+                background: white !important;
+                box-shadow: none !important;
+            }
+            .glass-card {
+                background: white !important;
+                box-shadow: none !important;
+            }
+            .no-print {
+                display: none !important;
+            }
+            /* Print dengan warna */
+            .print-header {
+                background: linear-gradient(to right, #2563eb, #1d4ed8) !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+                color: white !important;
+            }
+            .print-header th {
+                color: white !important;
+            }
+            .print-row-alt {
+                background-color: #f3f4f6 !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+            .print-row-total {
+                background-color: #eff6ff !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+            .text-green-600 {
+                color: #16a34a !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+            .text-red-600 {
+                color: #dc2626 !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+            .text-blue-700, .text-blue-800 {
+                color: #1d4ed8 !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+            #tandaTangan, #tandaTanganPTM {
+                display: grid !important;
+                grid-template-columns: repeat(3, 1fr) !important;
+            }
+        }
+
+        @media print {
+            #printAreaPTM {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                padding: 20px;
+                background: white !important;
+                box-shadow: none !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-white min-h-screen">
+    <!-- Header -->
+    <header class="bg-white/95 backdrop-blur-md shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16 md:h-20">
+                <!-- Logo/Title -->
+                <div class="flex items-center">
+                    <h1 class="text-lg md:text-xl lg:text-2xl font-bold text-blue-800">
+                        <i class="fas fa-users mr-2 text-blue-600"></i>PKK RW. 015 PGC-1
+                    </h1>
+                </div>
+
+                <!-- Login Button -->
+                <button class="btn-3d text-white px-6 py-2 rounded-lg font-semibold">
+                    <i class="fas fa-sign-in-alt mr-2"></i>Login
+                </button>
+            </div>
+        </div>
+
+    </header>
+
+    <!-- Hero Section -->
+    <section id="beranda" class="hero-gradient text-white py-16 md:py-24 lg:py-32 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-10 left-10 w-32 h-32 bg-white rounded-full blur-3xl"></div>
+            <div class="absolute bottom-10 right-10 w-48 h-48 bg-white rounded-full blur-3xl"></div>
+            <div class="absolute top-1/2 left-1/2 w-64 h-64 bg-white rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+        </div>
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 animate-fadeInUp drop-shadow-lg">
+                POSBINDU CENDRAWASIH 1
+            </h2>
+            <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-light opacity-90 animate-fadeInUp" style="animation-delay: 0.2s;">
+                Pesona Gading Cibitung
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main id="data-kegiatan" class="container mx-auto px-4 py-8 md:py-12">
+        <!-- Filter Section -->
+        <div class="mb-8 glass-card rounded-2xl p-4 md:p-6 shadow-xl">
+            <div class="flex flex-col sm:flex-row items-center gap-4">
+                <label class="font-semibold text-gray-700 flex items-center text-sm">
+                    <i class="fas fa-filter mr-2 text-blue-600"></i>Filter RT:
+                </label>
+                <select id="rtFilter" class="w-full sm:w-auto px-3 py-1.5 border-2 border-blue-200 rounded-lg focus:border-blue-500 focus:outline-none bg-white transition-all text-sm">
+                    <option value="">Semua RT</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Statistics Cards -->
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-8">
+            <!-- Jumlah KK -->
+            <div class="glass-card rounded-2xl p-4 md:p-6 card-hover shadow-xl">
+                <div class="flex items-center justify-between mb-2">
+                    <div class="w-12 h-12 md:w-14 md:h-14 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center shadow-lg">
+                        <i class="fas fa-home text-white text-xl md:text-2xl"></i>
+                    </div>
+                </div>
+                <p class="text-gray-600 text-xs md:text-sm font-medium">Jumlah KK</p>
+                <p id="totalKK" class="text-2xl md:text-3xl font-bold text-blue-800">0</p>
+            </div>
+
+            <!-- Total Penduduk -->
+            <div class="glass-card rounded-2xl p-4 md:p-6 card-hover shadow-xl">
+                <div class="flex items-center justify-between mb-2">
+                    <div class="w-12 h-12 md:w-14 md:h-14 bg-gradient-to-br from-green-500 to-green-700 rounded-xl flex items-center justify-center shadow-lg">
+                        <i class="fas fa-users text-white text-xl md:text-2xl"></i>
+                    </div>
+                </div>
+                <p class="text-gray-600 text-xs md:text-sm font-medium">Total Penduduk</p>
+                <p id="totalPenduduk" class="text-2xl md:text-3xl font-bold text-green-800">0</p>
+            </div>
+
+            <!-- Laki-laki -->
+            <div class="glass-card rounded-2xl p-4 md:p-6 card-hover shadow-xl">
+                <div class="flex items-center justify-between mb-2">
+                    <div class="w-12 h-12 md:w-14 md:h-14 bg-gradient-to-br from-indigo-500 to-indigo-700 rounded-xl flex items-center justify-center shadow-lg">
+                        <i class="fas fa-male text-white text-xl md:text-2xl"></i>
+                    </div>
+                </div>
+                <p class="text-gray-600 text-xs md:text-sm font-medium">Laki-laki</p>
+                <p id="totalLaki" class="text-2xl md:text-3xl font-bold text-indigo-800">0</p>
+            </div>
+
+            <!-- Perempuan -->
+            <div class="glass-card rounded-2xl p-4 md:p-6 card-hover shadow-xl">
+                <div class="flex items-center justify-between mb-2">
+                    <div class="w-12 h-12 md:w-14 md:h-14 bg-gradient-to-br from-pink-500 to-pink-700 rounded-xl flex items-center justify-center shadow-lg">
+                        <i class="fas fa-female text-white text-xl md:text-2xl"></i>
+                    </div>
+                </div>
+                <p class="text-gray-600 text-xs md:text-sm font-medium">Perempuan</p>
+                <p id="totalPerempuan" class="text-2xl md:text-3xl font-bold text-pink-800">0</p>
+            </div>
+        </div>
+
+        <!-- Charts Section -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+            <!-- Pie Chart - Kepala Keluarga -->
+            <div class="glass-card rounded-2xl p-4 md:p-6 shadow-xl card-hover">
+                <h3 class="text-lg md:text-xl font-bold text-gray-800 mb-4 flex items-center">
+                    <i class="fas fa-chart-pie mr-2 text-blue-600"></i>Kepala Keluarga
+                </h3>
+                <div class="relative h-64 md:h-80">
+                    <canvas id="pieChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Bar Chart - Jumlah Penduduk -->
+            <div class="glass-card rounded-2xl p-4 md:p-6 shadow-xl card-hover">
+                <h3 class="text-lg md:text-xl font-bold text-gray-800 mb-4 flex items-center">
+                    <i class="fas fa-chart-bar mr-2 text-blue-600"></i>Jumlah Penduduk
+                </h3>
+                <div class="relative h-64 md:h-80">
+                    <canvas id="barChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Population Pyramid -->
+        <div class="glass-card rounded-2xl p-4 md:p-6 shadow-xl card-hover mb-8">
+            <h3 class="text-lg md:text-xl font-bold text-gray-800 mb-4 flex items-center">
+                <i class="fas fa-layer-group mr-2 text-blue-600"></i>Piramida Penduduk
+            </h3>
+            <div class="relative h-[550px] md:h-[600px]">
+                <canvas id="pyramidChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Grid 2 kolom untuk Balita dan Sekolah/Remaja -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+            <!-- Balita Chart -->
+            <div class="glass-card rounded-2xl p-4 md:p-6 shadow-xl card-hover">
+                <h3 class="text-lg md:text-xl font-bold text-gray-800 mb-4 flex items-center">
+                    <i class="fas fa-baby mr-2 text-blue-600"></i>Balita (Usia 0-5 Tahun)
+                </h3>
+                <div class="relative h-64 md:h-80">
+                    <canvas id="balitaChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Sekolah dan Remaja Chart -->
+            <div class="glass-card rounded-2xl p-4 md:p-6 shadow-xl card-hover">
+                <h3 class="text-lg md:text-xl font-bold text-gray-800 mb-4 flex items-center">
+                    <i class="fas fa-graduation-cap mr-2 text-blue-600"></i>Sekolah dan Remaja (Usia 6-18 Tahun)
+                </h3>
+                <div class="relative h-64 md:h-80">
+                    <canvas id="sekolahRemajaChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Grid 2 kolom untuk Dewasa dan Lansia -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+            <!-- Dewasa Chart -->
+            <div class="glass-card rounded-2xl p-4 md:p-6 shadow-xl card-hover">
+                <h3 class="text-lg md:text-xl font-bold text-gray-800 mb-4 flex items-center">
+                    <i class="fas fa-user-tie mr-2 text-blue-600"></i>Dewasa (Usia 19-59 Tahun)
+                </h3>
+                <div class="relative h-64 md:h-80">
+                    <canvas id="dewasaChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Lansia Chart -->
+            <div class="glass-card rounded-2xl p-4 md:p-6 shadow-xl card-hover">
+                <h3 class="text-lg md:text-xl font-bold text-gray-800 mb-4 flex items-center">
+                    <i class="fas fa-user-clock mr-2 text-blue-600"></i>Lansia (Usia 60 Tahun Keatas)
+                </h3>
+                <div class="relative h-64 md:h-80">
+                    <canvas id="lansiaChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Grid 2 kolom untuk WUS dan PUS -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+            <!-- Wanita Usia Subur Chart -->
+            <div class="glass-card rounded-2xl p-4 md:p-6 shadow-xl card-hover">
+                <h3 class="text-lg md:text-xl font-bold text-gray-800 mb-4 flex items-center">
+                    <i class="fas fa-female mr-2 text-blue-600"></i>Wanita Usia Subur (Perempuan Usia 15-49 Tahun)
+                </h3>
+                <div class="relative h-64 md:h-80">
+                    <canvas id="wusChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Pasangan Usia Subur Chart -->
+            <div class="glass-card rounded-2xl p-4 md:p-6 shadow-xl card-hover">
+                <h3 class="text-lg md:text-xl font-bold text-gray-800 mb-4 flex items-center">
+                    <i class="fas fa-heart mr-2 text-blue-600"></i>Pasangan Usia Subur (Usia 15-49 Tahun)
+                </h3>
+                <div class="relative h-64 md:h-80">
+                    <canvas id="pusChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabel Rekapitulasi -->
+        <div class="glass-card rounded-2xl p-4 md:p-6 shadow-xl card-hover mb-8">
+            <h3 class="text-lg md:text-xl font-bold text-gray-800 mb-4 flex items-center">
+                <i class="fas fa-clipboard-list mr-2 text-blue-600"></i>Rekapitulasi Data Penduduk
+            </h3>
+            <div class="overflow-x-auto rounded-xl border border-blue-200">
+                <table class="w-full">
+                    <thead>
+                        <tr class="bg-gradient-to-r from-blue-600 to-blue-700 text-white">
+                            <th class="px-3 py-2 text-center font-bold text-xs whitespace-nowrap w-12">No</th>
+                            <th class="px-3 py-2 text-center font-bold text-xs whitespace-nowrap">Uraian</th>
+                            <th class="px-3 py-2 text-center font-bold text-xs whitespace-nowrap w-20">Total</th>
+                            <th class="px-3 py-2 text-center font-bold text-xs whitespace-nowrap w-20">Laki-laki</th>
+                            <th class="px-3 py-2 text-center font-bold text-xs whitespace-nowrap w-20">Perempuan</th>
+                        </tr>
+                    </thead>
+                    <tbody id="rekapTableBody">
+                        <!-- Data will be inserted here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Tabel Rekap PTM Lansia -->
+        <div class="glass-card rounded-2xl p-4 md:p-6 shadow-xl card-hover mb-8">
+            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-4 gap-3">
+                <h3 class="text-lg md:text-xl font-bold text-gray-800 flex items-center">
+                    <i class="fas fa-heartbeat mr-2 text-blue-600"></i>Rekap PTM Lansia
+                </h3>
+                <div class="flex flex-col sm:flex-row items-center gap-2">
+                    <label class="font-medium text-gray-700 text-sm flex items-center">
+                        <i class="fas fa-calendar-alt mr-1 text-blue-600"></i>Periode:
+                    </label>
+                    <select id="filterBulanPTMBeranda" class="px-3 py-1.5 border-2 border-blue-200 rounded-lg focus:border-blue-500 focus:outline-none bg-white text-sm">
+                        <option value="1">Januari</option>
+                        <option value="2">Februari</option>
+                        <option value="3">Maret</option>
+                        <option value="4">April</option>
+                        <option value="5">Mei</option>
+                        <option value="6">Juni</option>
+                        <option value="7">Juli</option>
+                        <option value="8">Agustus</option>
+                        <option value="9">September</option>
+                        <option value="10">Oktober</option>
+                        <option value="11">November</option>
+                        <option value="12">Desember</option>
+                    </select>
+                    <select id="filterTahunPTMBeranda" class="px-3 py-1.5 border-2 border-blue-200 rounded-lg focus:border-blue-500 focus:outline-none bg-white text-sm">
+                        <option value="2025">2025</option>
+                        <option value="2024">2024</option>
+                        <option value="2026">2026</option>
+                    </select>
+                </div>
+            </div>
+            <div class="overflow-x-auto rounded-xl border border-blue-200">
+                <table class="w-full">
+                    <thead>
+                        <tr class="bg-gradient-to-r from-blue-600 to-blue-700 text-white">
+                            <th class="px-2 py-3 text-center font-bold text-xs whitespace-nowrap">No</th>
+                            <th class="px-2 py-3 text-center font-bold text-xs whitespace-nowrap">Tanggal</th>
+                            <th class="px-2 py-3 text-center font-bold text-xs">Nama</th>
+                            <th class="px-2 py-3 text-center font-bold text-xs whitespace-nowrap">NIK</th>
+                            <th class="px-2 py-3 text-center font-bold text-xs whitespace-nowrap">Tgl Lahir</th>
+                            <th class="px-2 py-3 text-center font-bold text-xs">Alamat</th>
+                            <th class="px-2 py-3 text-center font-bold text-xs whitespace-nowrap">RT</th>
+                            <th class="px-2 py-3 text-center font-bold text-xs whitespace-nowrap">TD</th>
+                            <th class="px-2 py-3 text-center font-bold text-xs whitespace-nowrap">TB</th>
+                            <th class="px-2 py-3 text-center font-bold text-xs whitespace-nowrap">BB</th>
+                            <th class="px-2 py-3 text-center font-bold text-xs whitespace-nowrap">LP</th>
+                            <th class="px-2 py-3 text-center font-bold text-xs whitespace-nowrap">GDS</th>
+                            <th class="px-2 py-3 text-center font-bold text-xs whitespace-nowrap">CHOL</th>
+                            <th class="px-2 py-3 text-center font-bold text-xs whitespace-nowrap">AU</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbodyPTMBeranda">
+                        <tr class="bg-white">
+                            <td colspan="14" class="px-4 py-8 text-center text-gray-500">Belum ada data PTM untuk periode ini</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Rekap Laporan Keuangan -->
+        <div class="glass-card rounded-2xl p-4 md:p-6 shadow-xl card-hover mb-8">
+            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-4 gap-3">
+                <h3 class="text-lg md:text-xl font-bold text-gray-800 flex items-center">
+                    <i class="fas fa-money-bill-wave mr-2 text-blue-600"></i>Rekap Laporan Keuangan
+                </h3>
+                <div class="flex flex-col sm:flex-row items-center gap-2">
+                    <label class="font-medium text-gray-700 text-sm flex items-center">
+                        <i class="fas fa-calendar-alt mr-1 text-blue-600"></i>Periode:
+                    </label>
+                    <select id="filterBulanKeuanganBeranda" class="px-3 py-1.5 border-2 border-blue-200 rounded-lg focus:border-blue-500 focus:outline-none bg-white text-sm">
+                        <option value="1">Januari</option>
+                        <option value="2">Februari</option>
+                        <option value="3">Maret</option>
+                        <option value="4">April</option>
+                        <option value="5">Mei</option>
+                        <option value="6">Juni</option>
+                        <option value="7">Juli</option>
+                        <option value="8">Agustus</option>
+                        <option value="9">September</option>
+                        <option value="10">Oktober</option>
+                        <option value="11">November</option>
+                        <option value="12">Desember</option>
+                    </select>
+                    <select id="filterTahunKeuanganBeranda" class="px-3 py-1.5 border-2 border-blue-200 rounded-lg focus:border-blue-500 focus:outline-none bg-white text-sm">
+                        <option value="2025">2025</option>
+                        <option value="2024">2024</option>
+                        <option value="2026">2026</option>
+                    </select>
+                </div>
+            </div>
+            <div class="overflow-x-auto rounded-xl border border-blue-200 mb-4">
+                <table class="w-full">
+                    <thead>
+                        <tr class="bg-gradient-to-r from-blue-600 to-blue-700 text-white">
+                            <th class="px-3 py-2 text-center font-bold text-xs w-10">No</th>
+                            <th class="px-3 py-2 text-center font-bold text-xs w-24">Tanggal</th>
+                            <th class="px-3 py-2 text-center font-bold text-xs">Uraian</th>
+                            <th class="px-3 py-2 text-center font-bold text-xs w-28">Pendapatan</th>
+                            <th class="px-3 py-2 text-center font-bold text-xs w-28">Pengeluaran</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbodyKeuanganBeranda">
+                        <tr class="bg-white">
+                            <td colspan="5" class="px-3 py-6 text-center text-xs text-gray-500">Belum ada data transaksi untuk periode ini</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- Ringkasan -->
+            <div class="overflow-x-auto rounded-xl border border-blue-200">
+                <table class="w-full">
+                    <tbody>
+                        <tr class="bg-gray-100">
+                            <td class="px-3 py-2 font-bold text-xs text-gray-700 border-b">Saldo Bulan Sebelumnya</td>
+                            <td id="saldoSebelumnyaBeranda" class="px-3 py-2 text-right font-bold text-xs text-blue-700 border-b w-32">Rp 0</td>
+                        </tr>
+                        <tr class="bg-white">
+                            <td class="px-3 py-2 font-bold text-xs text-gray-700 border-b">Jumlah Pendapatan</td>
+                            <td id="totalPendapatanBeranda" class="px-3 py-2 text-right font-bold text-xs text-green-600 border-b w-32">Rp 0</td>
+                        </tr>
+                        <tr class="bg-gray-100">
+                            <td class="px-3 py-2 font-bold text-xs text-gray-700 border-b">Jumlah Pengeluaran</td>
+                            <td id="totalPengeluaranBeranda" class="px-3 py-2 text-right font-bold text-xs text-red-600 border-b w-32">Rp 0</td>
+                        </tr>
+                        <tr class="bg-blue-50">
+                            <td class="px-3 py-2 font-bold text-xs text-gray-800">Saldo Bulan Ini</td>
+                            <td id="saldoBulanIniBeranda" class="px-3 py-2 text-right font-bold text-xs text-blue-800 w-32">Rp 0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Data Table Section -->
+        <div class="glass-card rounded-2xl p-4 md:p-6 shadow-xl">
+            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-4 gap-3">
+                <h3 class="text-lg md:text-xl font-bold text-gray-800 flex items-center">
+                    <i class="fas fa-table mr-2 text-blue-600"></i>Data Penduduk
+                </h3>
+                <button onclick="fetchData()" class="px-4 py-1.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium text-sm transition-all flex items-center">
+                    <i class="fas fa-sync-alt mr-2"></i>Refresh Data
+                </button>
+            </div>
+
+            <!-- Search -->
+            <div class="mb-4">
+                <div class="relative">
+                    <input type="text" id="searchInput" placeholder="Cari data..." 
+                        class="w-full px-3 py-2 pl-10 border-2 border-blue-200 rounded-xl focus:border-blue-500 focus:outline-none bg-white transition-all text-sm">
+                    <i class="fas fa-search absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm"></i>
+                </div>
+            </div>
+
+            <!-- Table -->
+            <div class="overflow-x-auto rounded-xl border border-blue-200">
+                <table class="w-full min-w-[700px]">
+                    <thead>
+                        <tr class="bg-gradient-to-r from-blue-600 to-blue-700 text-white">
+                            <th class="px-1.5 py-1.5 text-center font-bold text-xs whitespace-nowrap">No</th>
+                            <th class="px-1.5 py-1.5 text-center font-bold text-xs whitespace-nowrap">RT</th>
+                            <th class="px-1.5 py-1.5 text-center font-bold text-xs whitespace-nowrap">Alamat</th>
+                            <th class="px-1.5 py-1.5 text-center font-bold text-xs whitespace-nowrap">Nama</th>
+                            <th class="px-1.5 py-1.5 text-center font-bold text-xs whitespace-nowrap">JK</th>
+                            <th class="px-1.5 py-1.5 text-center font-bold text-xs whitespace-nowrap">Tempat</th>
+                            <th class="px-1.5 py-1.5 text-center font-bold text-xs whitespace-nowrap">Tgl. Lahir</th>
+                            <th class="px-1.5 py-1.5 text-center font-bold text-xs">Hub. Keluarga*)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        <!-- Data will be inserted here -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Pagination -->
+            <div class="flex flex-col sm:flex-row items-center justify-between mt-3 gap-3">
+                <p id="pageInfo" class="text-gray-600 text-xs">Menampilkan 0 - 0 dari 0 data</p>
+                <div class="flex items-center gap-1">
+                    <button id="prevBtn" class="px-3 py-1.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed text-xs">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <span id="pageNumbers" class="flex gap-1">
+                        <!-- Page numbers will be inserted here -->
+                    </span>
+                    <button id="nextBtn" class="px-3 py-1.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed text-xs">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4">
+        <!-- Backdrop -->
+        <div id="loginBackdrop" class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+        
+        <!-- Modal Content -->
+        <div class="relative bg-white rounded-2xl shadow-2xl w-full max-w-md p-6 md:p-8 transform transition-all animate-fadeInUp">
+            <!-- Close Button -->
+            <button id="closeLoginModal" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 text-xl transition-colors">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <!-- Header -->
+            <div class="text-center mb-6">
+                <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                    <i class="fas fa-user-lock text-white text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-800">Login</h3>
+                <p class="text-gray-500 text-sm mt-1">Masukkan kredensial Anda</p>
+            </div>
+            
+            <!-- Login Form -->
+            <form id="loginForm" class="space-y-4">
+                <!-- Username -->
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">
+                        <i class="fas fa-user mr-1 text-blue-600"></i> Username
+                    </label>
+                    <input type="text" id="loginUsername" placeholder="Masukkan username" 
+                        class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-blue-500 focus:outline-none transition-all"
+                        required>
+                </div>
+                
+                <!-- Password -->
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">
+                        <i class="fas fa-lock mr-1 text-blue-600"></i> Password
+                    </label>
+                    <div class="relative">
+                        <input type="password" id="loginPassword" placeholder="Masukkan password" 
+                            class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-blue-500 focus:outline-none transition-all pr-12"
+                            required>
+                        <button type="button" id="togglePassword" class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Error Message -->
+                <div id="loginError" class="hidden bg-red-50 border border-red-200 text-red-600 px-4 py-3 rounded-xl text-sm">
+                    <i class="fas fa-exclamation-circle mr-2"></i>
+                    <span id="loginErrorText">Username atau password salah</span>
+                </div>
+                
+                <!-- Submit Button -->
+                <button type="submit" class="w-full btn-3d text-white py-3 rounded-xl font-semibold text-lg mt-6">
+                    <i class="fas fa-sign-in-alt mr-2"></i> Masuk
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Halaman Laporan Keuangan -->
+    <section id="laporanKeuanganPage" class="hidden min-h-screen bg-gradient-to-br from-blue-50 to-white">
+        <!-- Header Laporan Keuangan -->
+        <header class="bg-white/95 backdrop-blur-md shadow-lg sticky top-0 z-50">
+            <div class="container mx-auto px-4">
+                <div class="flex items-center justify-between h-16 md:h-20">
+                    <div class="flex items-center gap-3">
+                        <img src="https://iili.io/fccfnQ1.png" alt="Logo" class="h-10 md:h-12 w-auto">
+                        <h1 class="text-lg md:text-xl lg:text-2xl font-bold text-blue-800">
+                            Laporan Keuangan
+                        </h1>
+                    </div>
+                    <div class="flex items-center gap-2 md:gap-3">
+                        <button onclick="printLaporanKeuangan()" class="btn-3d-green text-white px-3 md:px-5 py-2 rounded-lg font-semibold text-sm md:text-base">
+                            <i class="fas fa-print mr-1 md:mr-2"></i><span class="hidden sm:inline">Cetak</span>
+                        </button>
+                        <button onclick="logout()" class="btn-3d-red text-white px-3 md:px-5 py-2 rounded-lg font-semibold text-sm md:text-base">
+                            <i class="fas fa-sign-out-alt mr-1 md:mr-2"></i><span class="hidden sm:inline">Keluar</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Content Laporan Keuangan -->
+        <div class="container mx-auto px-4 py-6 md:py-8">
+            <!-- Form Input -->
+            <div class="glass-card rounded-2xl p-4 md:p-6 shadow-xl mb-6">
+                <h3 class="text-lg font-bold text-gray-800 mb-4 flex items-center">
+                    <i class="fas fa-plus-circle mr-2 text-blue-600"></i>Input Transaksi
+                </h3>
+                <form id="formKeuangan" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Tanggal</label>
+                        <input type="date" id="inputTanggal" class="w-full px-3 py-2 border-2 border-blue-200 rounded-lg focus:border-blue-500 focus:outline-none bg-white" required>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Uraian</label>
+                        <input type="text" id="inputUraian" placeholder="Masukkan uraian" class="w-full px-3 py-2 border-2 border-blue-200 rounded-lg focus:border-blue-500 focus:outline-none bg-white" required>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Jenis</label>
+                        <select id="inputJenis" class="w-full px-3 py-2 border-2 border-blue-200 rounded-lg focus:border-blue-500 focus:outline-none bg-white" required>
+                            <option value="">Pilih Jenis</option>
+                            <option value="pendapatan">Pendapatan</option>
+                            <option value="pengeluaran">Pengeluaran</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Jumlah (Rp)</label>
+                        <input type="text" id="inputJumlah" placeholder="Rp 0" class="w-full px-3 py-2 border-2 border-blue-200 rounded-lg focus:border-blue-500 focus:outline-none bg-white" required oninput="formatInputRupiah(this)">
+                    </div>
+                    <div class="flex items-end gap-2">
+                        <button type="submit" class="flex-1 btn-3d text-white px-4 py-2 rounded-lg font-semibold">
+                            <i class="fas fa-save mr-1"></i> Simpan
+                        </button>
+                        <button type="button" onclick="refreshKeuangan()" class="px-4 py-2 bg-gray-500 hover:bg-gray-600 text-white rounded-lg font-semibold transition-all">
+                            <i class="fas fa-sync-alt"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Filter Periode -->
+            <div class="glass-card rounded-2xl p-4 md:p-6 shadow-xl mb-6">
+                <div class="flex flex-col sm:flex-row items-center gap-4">
+                    <label class="font-semibold text-gray-700 flex items-center">
+                        <i class="fas fa-calendar-alt mr-2 text-blue-600"></i>Periode:
+                    </label>
+                    <select id="filterBulan" class="w-full sm:w-auto px-4 py-2 border-2 border-blue-200 rounded-lg focus:border-blue-500 focus:outline-none bg-white">
+                        <option value="1">Januari</option>
+                        <option value="2">Februari</option>
+                        <option value="3">Maret</option>
+                        <option value="4">April</option>
+                        <option value="5">Mei</option>
+                        <option value="6">Juni</option>
+                        <option value="7">Juli</option>
+                        <option value="8">Agustus</option>
+                        <option value="9">September</option>
+                        <option value="10">Oktober</option>
+                        <option value="11">November</option>
+                        <option value="12">Desember</option>
+                    </select>
+                    <select id="filterTahun" class="w-full sm:w-auto px-4 py-2 border-2 border-blue-200 rounded-lg focus:border-blue-500 focus:outline-none bg-white">
+                        <option value="2025">2025</option>
+                        <option value="2024">2024</option>
+                        <option value="2026">2026</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Tabel Rekapitulasi untuk Print -->
+            <div id="printArea" class="glass-card rounded-2xl p-4 md:p-6 shadow-xl mb-6">
+                <!-- Header Tabel dengan Logo -->
+                <div class="flex items-center justify-between mb-6">
+                    <img src="https://iili.io/fcc3NZF.png" alt="Logo Kiri" class="h-16 md:h-20 w-auto">
+                    <div class="text-center flex-1 px-4">
+                        <h2 class="text-xl md:text-2xl font-bold text-gray-800">LAPORAN KEUANGAN</h2>
+                        <p class="text-lg md:text-xl font-semibold text-blue-700">POSBINDU CENDRAWASIH 1</p>
+                        <p id="periodeLabel" class="text-sm text-gray-600 mt-1">Periode: Januari 2025</p>
+                    </div>
+                    <img src="https://iili.io/fccfnQ1.png" alt="Logo Kanan" class="h-16 md:h-20 w-auto">
+                </div>
+
+                <!-- Tabel Transaksi -->
+                <div class="overflow-x-auto rounded-xl border border-blue-200 mb-6">
+                    <table class="w-full" id="tabelKeuangan">
+                        <thead>
+                            <tr class="bg-gradient-to-r from-blue-600 to-blue-700 text-white print-header">
+                                <th class="px-4 py-3 text-center font-bold text-sm w-12">No</th>
+                                <th class="px-4 py-3 text-center font-bold text-sm w-28">Tanggal</th>
+                                <th class="px-4 py-3 text-center font-bold text-sm">Uraian</th>
+                                <th class="px-4 py-3 text-center font-bold text-sm w-32">Pendapatan</th>
+                                <th class="px-4 py-3 text-center font-bold text-sm w-32">Pengeluaran</th>
+                                <th class="px-4 py-3 text-center font-bold text-sm w-16 no-print">Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbodyKeuangan">
+                            <!-- Data akan diisi oleh JavaScript -->
+                            <tr class="bg-white">
+                                <td colspan="6" class="px-4 py-8 text-center text-gray-500">Belum ada data transaksi</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Ringkasan -->
+                <div class="overflow-x-auto rounded-xl border border-blue-200">
+                    <table class="w-full">
+                        <tbody>
+                            <tr class="bg-gray-100 print-row-alt">
+                                <td class="px-4 py-3 font-bold text-sm text-gray-700 border-b">Saldo Bulan Sebelumnya</td>
+                                <td id="saldoSebelumnya" class="px-4 py-3 text-right font-bold text-sm text-blue-700 border-b w-40">Rp 0</td>
+                            </tr>
+                            <tr class="bg-white">
+                                <td class="px-4 py-3 font-bold text-sm text-gray-700 border-b">Jumlah Pendapatan</td>
+                                <td id="totalPendapatan" class="px-4 py-3 text-right font-bold text-sm text-green-600 border-b w-40">Rp 0</td>
+                            </tr>
+                            <tr class="bg-gray-100 print-row-alt">
+                                <td class="px-4 py-3 font-bold text-sm text-gray-700 border-b">Jumlah Pengeluaran</td>
+                                <td id="totalPengeluaran" class="px-4 py-3 text-right font-bold text-sm text-red-600 border-b w-40">Rp 0</td>
+                            </tr>
+                            <tr class="bg-blue-50 print-row-total">
+                                <td class="px-4 py-3 font-bold text-sm text-gray-800">Saldo Bulan Ini</td>
+                                <td id="saldoBulanIni" class="px-4 py-3 text-right font-bold text-sm text-blue-800 w-40">Rp 0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Tanda Tangan (Hanya muncul saat print) -->
+                <div id="tandaTangan" class="hidden print:grid grid-cols-3 gap-4 mt-12 pt-8">
+                    <div class="text-center">
+                        <p class="font-semibold text-sm text-gray-800 mb-16">KETUA PKK</p>
+                        <p class="text-sm text-gray-700">( ............................... )</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="font-semibold text-sm text-gray-800 mb-16">KETUA POSBINDU</p>
+                        <p class="text-sm text-gray-700">( ............................... )</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="font-semibold text-sm text-gray-800 mb-16">BENDAHARA</p>
+                        <p class="text-sm text-gray-700">( ............................... )</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="py-6">
+            <div class="container mx-auto px-4 text-center">
+                <p class="text-sm md:text-base text-gray-600">
+                    <i class="far fa-copyright mr-1"></i> 2025 POSBINDU CENDRAWASIH 1. All Rights Reserved
+                </p>
+            </div>
+        </footer>
+    </section>
+
+    <!-- Halaman PTM Lansia -->
+    <section id="ptmLansiaPage" class="hidden min-h-screen bg-gradient-to-br from-blue-50 to-white">
+        <!-- Header PTM Lansia -->
+        <header class="bg-white/95 backdrop-blur-md shadow-lg sticky top-0 z-50">
+            <div class="container mx-auto px-4">
+                <div class="flex items-center justify-between h-16 md:h-20">
+                    <div class="flex items-center gap-3">
+                        <img src="https://iili.io/fccfnQ1.png" alt="Logo" class="h-10 md:h-12 w-auto">
+                        <h1 class="text-lg md:text-xl lg:text-2xl font-bold text-blue-800">
+                            PTM Lansia
+                        </h1>
+                    </div>
+                    <div class="flex items-center gap-2 md:gap-3">
+                        <button onclick="printPTMLansia()" class="btn-3d-green text-white px-3 md:px-5 py-2 rounded-lg font-semibold text-sm md:text-base">
+                            <i class="fas fa-print mr-1 md:mr-2"></i><span class="hidden sm:inline">Cetak</span>
+                        </button>
+                        <button onclick="logout()" class="btn-3d-red text-white px-3 md:px-5 py-2 rounded-lg font-semibold text-sm md:text-base">
+                            <i class="fas fa-sign-out-alt mr-1 md:mr-2"></i><span class="hidden sm:inline">Keluar</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Content PTM Lansia -->
+        <div class="container mx-auto px-4 py-6 md:py-8">
+            <!-- Form Input -->
+            <div class="glass-card rounded-2xl p-4 md:p-6 shadow-xl mb-6 no-print">
+                <h3 class="text-lg font-bold text-gray-800 mb-4 flex items-center">
+                    <i class="fas fa-plus-circle mr-2 text-blue-600"></i>Input Data PTM
+                </h3>
+                <form id="formPTM" class="space-y-4">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Tanggal Pemeriksaan</label>
+                            <input type="date" id="ptmTanggal" class="w-full px-3 py-2 border-2 border-blue-200 rounded-lg focus:border-blue-500 focus:outline-none bg-white" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Nama</label>
+                            <input type="text" id="ptmNama" list="namaDatalist" placeholder="Ketik nama..." class="w-full px-3 py-2 border-2 border-blue-200 rounded-lg focus:border-blue-500 focus:outline-none bg-white" oninput="searchAndFillPTMData()" required>
+                            <datalist id="namaDatalist">
+                                <!-- Options will be populated from CSV -->
+                            </datalist>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">NIK</label>
+                            <input type="text" id="ptmNIK" class="w-full px-3 py-2 border-2 border-blue-200 rounded-lg focus:border-blue-500 focus:outline-none bg-gray-100" readonly>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Tgl. Lahir</label>
+                            <input type="text" id="ptmTglLahir" class="w-full px-3 py-2 border-2 border-blue-200 rounded-lg focus:border-blue-500 focus:outline-none bg-gray-100" readonly>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Alamat</label>
+                            <input type="text" id="ptmAlamat" class="w-full px-3 py-2 border-2 border-blue-200 rounded-lg focus:border-blue-500 focus:outline-none bg-gray-100" readonly>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">RT</label>
+                            <input type="text" id="ptmRT" class="w-full px-3 py-2 border-2 border-blue-200 rounded-lg focus:border-blue-500 focus:outline-none bg-gray-100" readonly>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">TD (mmHg)</label>
+                            <input type="text" id="ptmTD" placeholder="120/80" class="w-full px-3 py-2 border-2 border-blue-200 rounded-lg focus:border-blue-500 focus:outline-none bg-white" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">TB (cm)</label>
+                            <input type="number" id="ptmTB" placeholder="165" class="w-full px-3 py-2 border-2 border-blue-200 rounded-lg focus:border-blue-500 focus:outline-none bg-white" required>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">BB (kg)</label>
+                            <input type="number" id="ptmBB" placeholder="65" step="0.1" class="w-full px-3 py-2 border-2 border-blue-200 rounded-lg focus:border-blue-500 focus:outline-none bg-white" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">LP (cm)</label>
+                            <input type="number" id="ptmLP" placeholder="80" step="0.1" class="w-full px-3 py-2 border-2 border-blue-200 rounded-lg focus:border-blue-500 focus:outline-none bg-white" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">GDS (mg/dL)</label>
+                            <input type="number" id="ptmGDS" placeholder="100" class="w-full px-3 py-2 border-2 border-blue-200 rounded-lg focus:border-blue-500 focus:outline-none bg-white" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">CHOL (mg/dL)</label>
+                            <input type="number" id="ptmCHOL" placeholder="180" class="w-full px-3 py-2 border-2 border-blue-200 rounded-lg focus:border-blue-500 focus:outline-none bg-white" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">AU (mg/dL)</label>
+                            <input type="number" id="ptmAU" placeholder="5.5" step="0.1" class="w-full px-3 py-2 border-2 border-blue-200 rounded-lg focus:border-blue-500 focus:outline-none bg-white" required>
+                        </div>
+                    </div>
+                    <div class="flex gap-2 justify-end">
+                        <button type="submit" class="btn-3d text-white px-6 py-2 rounded-lg font-semibold">
+                            <i class="fas fa-save mr-2"></i>Simpan
+                        </button>
+                        <button type="button" onclick="refreshPTM()" class="px-4 py-2 bg-gray-500 hover:bg-gray-600 text-white rounded-lg font-semibold transition-all">
+                            <i class="fas fa-sync-alt mr-2"></i>Refresh
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Filter Periode -->
+            <div class="glass-card rounded-2xl p-4 md:p-6 shadow-xl mb-6 no-print">
+                <div class="flex flex-col sm:flex-row items-center gap-4">
+                    <label class="font-semibold text-gray-700 flex items-center">
+                        <i class="fas fa-calendar-alt mr-2 text-blue-600"></i>Periode:
+                    </label>
+                    <select id="filterBulanPTM" class="w-full sm:w-auto px-4 py-2 border-2 border-blue-200 rounded-lg focus:border-blue-500 focus:outline-none bg-white">
+                        <option value="1">Januari</option>
+                        <option value="2">Februari</option>
+                        <option value="3">Maret</option>
+                        <option value="4">April</option>
+                        <option value="5">Mei</option>
+                        <option value="6">Juni</option>
+                        <option value="7">Juli</option>
+                        <option value="8">Agustus</option>
+                        <option value="9">September</option>
+                        <option value="10">Oktober</option>
+                        <option value="11">November</option>
+                        <option value="12">Desember</option>
+                    </select>
+                    <select id="filterTahunPTM" class="w-full sm:w-auto px-4 py-2 border-2 border-blue-200 rounded-lg focus:border-blue-500 focus:outline-none bg-white">
+                        <option value="2025">2025</option>
+                        <option value="2024">2024</option>
+                        <option value="2026">2026</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Tabel Rekapitulasi PTM untuk Print -->
+            <div id="printAreaPTM" class="glass-card rounded-2xl p-4 md:p-6 shadow-xl mb-6">
+                <!-- Header Tabel dengan Logo -->
+                <div class="flex items-center justify-between mb-6">
+                    <img src="https://iili.io/fcc3NZF.png" alt="Logo Kiri" class="h-16 md:h-20 w-auto">
+                    <div class="text-center flex-1 px-4">
+                        <h2 class="text-xl md:text-2xl font-bold text-gray-800">PTM LANSIA</h2>
+                        <p class="text-lg md:text-xl font-semibold text-blue-700">POSBINDU CENDRAWASIH 1</p>
+                        <p id="periodeLabelPTM" class="text-sm text-gray-600 mt-1">Periode: Januari 2025</p>
+                    </div>
+                    <img src="https://iili.io/fccfnQ1.png" alt="Logo Kanan" class="h-16 md:h-20 w-auto">
+                </div>
+
+                <!-- Tabel Data PTM -->
+                <div class="overflow-x-auto rounded-xl border border-blue-200 mb-6">
+                    <table class="w-full" id="tabelPTM">
+                        <thead>
+                            <tr class="bg-gradient-to-r from-blue-600 to-blue-700 text-white print-header">
+                                <th class="px-2 py-3 text-center font-bold text-xs whitespace-nowrap">No</th>
+                                <th class="px-2 py-3 text-center font-bold text-xs whitespace-nowrap">Tanggal</th>
+                                <th class="px-2 py-3 text-center font-bold text-xs">Nama</th>
+                                <th class="px-2 py-3 text-center font-bold text-xs whitespace-nowrap">NIK</th>
+                                <th class="px-2 py-3 text-center font-bold text-xs whitespace-nowrap">Tgl Lahir</th>
+                                <th class="px-2 py-3 text-center font-bold text-xs">Alamat</th>
+                                <th class="px-2 py-3 text-center font-bold text-xs whitespace-nowrap">RT</th>
+                                <th class="px-2 py-3 text-center font-bold text-xs whitespace-nowrap">TD</th>
+                                <th class="px-2 py-3 text-center font-bold text-xs whitespace-nowrap">TB</th>
+                                <th class="px-2 py-3 text-center font-bold text-xs whitespace-nowrap">BB</th>
+                                <th class="px-2 py-3 text-center font-bold text-xs whitespace-nowrap">LP</th>
+                                <th class="px-2 py-3 text-center font-bold text-xs whitespace-nowrap">GDS</th>
+                                <th class="px-2 py-3 text-center font-bold text-xs whitespace-nowrap">CHOL</th>
+                                <th class="px-2 py-3 text-center font-bold text-xs whitespace-nowrap">AU</th>
+                                <th class="px-2 py-3 text-center font-bold text-xs whitespace-nowrap no-print">Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbodyPTM">
+                            <tr class="bg-white">
+                                <td colspan="15" class="px-4 py-8 text-center text-gray-500">Belum ada data PTM untuk periode ini</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Tanda Tangan PTM (Hanya muncul saat print) -->
+                <div id="tandaTanganPTM" class="hidden print:grid grid-cols-3 gap-4 mt-12 pt-8">
+                    <div class="text-center">
+                        <p class="font-semibold text-sm text-gray-800 mb-16">KETUA PKK</p>
+                        <p class="text-sm text-gray-700">( ............................... )</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="font-semibold text-sm text-gray-800 mb-16">KETUA POSBINDU</p>
+                        <p class="text-sm text-gray-700">( ............................... )</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="font-semibold text-sm text-gray-800 mb-16">SEKRETARIS</p>
+                        <p class="text-sm text-gray-700">( ............................... )</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="py-6">
+            <div class="container mx-auto px-4 text-center">
+                <p class="text-sm md:text-base text-gray-600">
+                    <i class="far fa-copyright mr-1"></i> 2025 POSBINDU CENDRAWASIH 1. All Rights Reserved
+                </p>
+            </div>
+        </footer>
+    </section>
+
+    <!-- Footer Halaman Utama -->
+    <footer id="mainFooter" class="py-6 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-sm md:text-base text-gray-600">
+                <i class="far fa-copyright mr-1"></i> 2025 POSBINDU CENDRAWASIH 1. All Rights Reserved
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Global variables
+        let allData = [];
+        let filteredData = [];
+        let currentPage = 1;
+        const itemsPerPage = 20;
+        let pieChart, barChart, pyramidChart, balitaChart, sekolahRemajaChart, dewasaChart, lansiaChart, wusChart, pusChart;
+
+        // CSV URL
+        const csvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ10-Froxd9tfldWczk1Vz3TMt-RK_piSq78bL3yyhLX77E5Y6v6TEJGpFMNsot_uWu8kKlenHaa1Ro/pub?gid=0&single=true&output=csv';
+
+        // Month names in Indonesian (short format)
+        const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Agu', 'Sep', 'Okt', 'Nov', 'Des'];
+
+        // Format date to DD Month Year
+        function formatDate(dateStr) {
+            if (!dateStr) return '-';
+            
+            // Try different date formats
+            let date;
+            
+            // Try parsing as DD/MM/YYYY or DD-MM-YYYY
+            const parts = dateStr.split(/[\/\-]/);
+            if (parts.length === 3) {
+                const day = parseInt(parts[0]);
+                const month = parseInt(parts[1]) - 1;
+                const year = parseInt(parts[2]);
+                
+                if (!isNaN(day) && !isNaN(month) && !isNaN(year)) {
+                    // Handle 2-digit year
+                    const fullYear = year < 100 ? (year > 50 ? 1900 + year : 2000 + year) : year;
+                    return `${day} ${monthNames[month]} ${fullYear}`;
+                }
+            }
+            
+            // Try parsing as standard date
+            date = new Date(dateStr);
+            if (!isNaN(date.getTime())) {
+                const day = date.getDate();
+                const month = date.getMonth();
+                const year = date.getFullYear();
+                return `${day} ${monthNames[month]} ${year}`;
+            }
+            
+            return dateStr;
+        }
+
+        // Fetch and parse CSV data
+        async function fetchData() {
+            try {
+                const response = await fetch(csvUrl);
+                const text = await response.text();
+                const rows = text.split('\n').filter(row => row.trim());
+                const headers = parseCSVRow(rows[0]);
+                
+                allData = [];
+                for (let i = 1; i < rows.length; i++) {
+                    const values = parseCSVRow(rows[i]);
+                    if (values.length >= headers.length) {
+                        const row = {};
+                        headers.forEach((header, index) => {
+                            row[header.trim()] = values[index] ? values[index].trim() : '';
+                        });
+                        allData.push(row);
+                    }
+                }
+
+                populateRTFilter();
+                filterData();
+                populatePTMNamaDropdown();
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        }
+
+        // Parse CSV row handling quoted values
+        function parseCSVRow(row) {
+            const result = [];
+            let current = '';
+            let inQuotes = false;
+            
+            for (let i = 0; i < row.length; i++) {
+                const char = row[i];
+                if (char === '"') {
+                    inQuotes = !inQuotes;
+                } else if (char === ',' && !inQuotes) {
+                    result.push(current);
+                    current = '';
+                } else {
+                    current += char;
+                }
+            }
+            result.push(current);
+            return result;
+        }
+
+        // Populate RT filter
+        function populateRTFilter() {
+            const rtFilter = document.getElementById('rtFilter');
+            const rtKey = Object.keys(allData[0] || {}).find(k => k.toUpperCase() === 'RT') || 'RT';
+            const rtSet = new Set(allData.map(row => row[rtKey]).filter(rt => rt));
+            const rtList = Array.from(rtSet).sort((a, b) => {
+                const numA = parseInt(a) || 0;
+                const numB = parseInt(b) || 0;
+                return numA - numB;
+            });
+            
+            rtFilter.innerHTML = '<option value="">Semua RT</option>';
+            rtList.forEach(rt => {
+                const option = document.createElement('option');
+                option.value = rt;
+                option.textContent = `RT ${rt}`;
+                rtFilter.appendChild(option);
+            });
+        }
+
+        // Get column key helper
+        function getColumnKey(searchTerms) {
+            const keys = Object.keys(allData[0] || {});
+            for (const term of searchTerms) {
+                const found = keys.find(k => k.toUpperCase().includes(term.toUpperCase()));
+                if (found) return found;
+            }
+            return searchTerms[0];
+        }
+
+        // Filter data
+        function filterData() {
+            const rtFilter = document.getElementById('rtFilter').value;
+            const searchInput = document.getElementById('searchInput').value.toLowerCase();
+            const rtKey = Object.keys(allData[0] || {}).find(k => k.toUpperCase() === 'RT') || 'RT';
+
+            filteredData = allData.filter(row => {
+                const matchRT = !rtFilter || row[rtKey] === rtFilter;
+                const matchSearch = !searchInput || Object.values(row).some(val => 
+                    val.toString().toLowerCase().includes(searchInput)
+                );
+                return matchRT && matchSearch;
+            });
+
+            currentPage = 1;
+            updateStatistics();
+            updateCharts();
+            updateRekapTable();
+            updateTable();
+        }
+
+        // Update statistics
+        function updateStatistics() {
+            const hubKeluargaKey = getColumnKey(['HUB. KELUARGA*)', 'HUB. KELUARGA', 'HUB KELUARGA', 'HUBUNGAN']);
+            const genderKey = getColumnKey(['JENIS KELAMIN', 'JK', 'KELAMIN', 'GENDER']);
+
+            const totalKK = filteredData.filter(row => {
+                const hubKeluarga = (row[hubKeluargaKey] || '').toUpperCase();
+                return hubKeluarga === 'KEPALA KELUARGA';
+            }).length;
+
+            const totalPenduduk = filteredData.length;
+            
+            const totalLaki = filteredData.filter(row => {
+                const gender = (row[genderKey] || '').toUpperCase();
+                return gender.includes('LAKI') || gender === 'L' || gender === 'PRIA';
+            }).length;
+
+            const totalPerempuan = filteredData.filter(row => {
+                const gender = (row[genderKey] || '').toUpperCase();
+                return gender.includes('PEREMPUAN') || gender === 'P' || gender === 'WANITA';
+            }).length;
+
+            animateNumber('totalKK', totalKK);
+            animateNumber('totalPenduduk', totalPenduduk);
+            animateNumber('totalLaki', totalLaki);
+            animateNumber('totalPerempuan', totalPerempuan);
+        }
+
+        // Animate number
+        function animateNumber(elementId, target) {
+            const element = document.getElementById(elementId);
+            const start = parseInt(element.textContent) || 0;
+            const duration = 500;
+            const startTime = performance.now();
+
+            function update(currentTime) {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                const current = Math.floor(start + (target - start) * progress);
+                element.textContent = current.toLocaleString('id-ID');
+                
+                if (progress < 1) {
+                    requestAnimationFrame(update);
+                }
+            }
+            requestAnimationFrame(update);
+        }
+
+        // Update charts
+        function updateCharts() {
+            updatePieChart();
+            updateBarChart();
+            updatePyramidChart();
+            updateBalitaChart();
+            updateSekolahRemajaChart();
+            updateDewasaChart();
+            updateLansiaChart();
+            updateWUSChart();
+            updatePUSChart();
+        }
+
+        // Update Pie Chart
+        function updatePieChart() {
+            const rtKey = Object.keys(allData[0] || {}).find(k => k.toUpperCase() === 'RT') || 'RT';
+            const hubKeluargaKey = getColumnKey(['HUB. KELUARGA*)', 'HUB. KELUARGA', 'HUB KELUARGA', 'HUBUNGAN']);
+            
+            const kkByRT = {};
+            filteredData.forEach(row => {
+                const rt = row[rtKey] || 'Unknown';
+                const hubKeluarga = (row[hubKeluargaKey] || '').toUpperCase();
+                if (hubKeluarga === 'KEPALA KELUARGA') {
+                    kkByRT[rt] = (kkByRT[rt] || 0) + 1;
+                }
+            });
+
+            const labels = Object.keys(kkByRT).sort((a, b) => parseInt(a) - parseInt(b));
+            const data = labels.map(rt => kkByRT[rt]);
+            const colors = labels.map((_, i) => `hsl(${210 + i * 20}, 70%, ${50 + i * 5}%)`);
+
+            if (pieChart) pieChart.destroy();
+            
+            const ctx = document.getElementById('pieChart').getContext('2d');
+            pieChart = new Chart(ctx, {
+                type: 'pie',
+                data: {
+                    labels: labels.map(rt => `RT ${rt}`),
+                    datasets: [{
+                        data: data,
+                        backgroundColor: colors,
+                        borderColor: '#fff',
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                padding: 15,
+                                usePointStyle: true
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Update Bar Chart
+        function updateBarChart() {
+            const rtKey = Object.keys(allData[0] || {}).find(k => k.toUpperCase() === 'RT') || 'RT';
+            const genderKey = getColumnKey(['JENIS KELAMIN', 'JK', 'KELAMIN', 'GENDER']);
+            
+            const dataByRT = {};
+            filteredData.forEach(row => {
+                const rt = row[rtKey] || 'Unknown';
+                const gender = (row[genderKey] || '').toUpperCase();
+                
+                if (!dataByRT[rt]) {
+                    dataByRT[rt] = { male: 0, female: 0 };
+                }
+                
+                if (gender.includes('LAKI') || gender === 'L' || gender === 'PRIA') {
+                    dataByRT[rt].male++;
+                } else if (gender.includes('PEREMPUAN') || gender === 'P' || gender === 'WANITA') {
+                    dataByRT[rt].female++;
+                }
+            });
+
+            const labels = Object.keys(dataByRT).sort((a, b) => parseInt(a) - parseInt(b));
+            const maleData = labels.map(rt => dataByRT[rt].male);
+            const femaleData = labels.map(rt => dataByRT[rt].female);
+
+            if (barChart) barChart.destroy();
+            
+            const ctx = document.getElementById('barChart').getContext('2d');
+            barChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: labels.map(rt => `RT ${rt}`),
+                    datasets: [
+                        {
+                            label: 'Laki-laki',
+                            data: maleData,
+                            backgroundColor: 'rgba(59, 130, 246, 0.8)',
+                            borderColor: 'rgb(59, 130, 246)',
+                            borderWidth: 1
+                        },
+                        {
+                            label: 'Perempuan',
+                            data: femaleData,
+                            backgroundColor: 'rgba(236, 72, 153, 0.8)',
+                            borderColor: 'rgb(236, 72, 153)',
+                            borderWidth: 1
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            position: 'bottom'
+                        }
+                    }
+                }
+            });
+        }
+
+        // Update Pyramid Chart - Horizontal aligned bars
+        function updatePyramidChart() {
+            const ageKey = getColumnKey(['USIA', 'UMUR', 'AGE']);
+            const genderKey = getColumnKey(['JENIS KELAMIN', 'JK', 'KELAMIN', 'GENDER']);
+            
+            const ageGroups = [
+                { label: '> 75', min: 75, max: 200 },
+                { label: '70-74', min: 70, max: 74 },
+                { label: '65-69', min: 65, max: 69 },
+                { label: '60-64', min: 60, max: 64 },
+                { label: '55-59', min: 55, max: 59 },
+                { label: '50-54', min: 50, max: 54 },
+                { label: '45-49', min: 45, max: 49 },
+                { label: '40-44', min: 40, max: 44 },
+                { label: '35-39', min: 35, max: 39 },
+                { label: '30-34', min: 30, max: 34 },
+                { label: '25-29', min: 25, max: 29 },
+                { label: '20-24', min: 20, max: 24 },
+                { label: '15-19', min: 15, max: 19 },
+                { label: '10-14', min: 10, max: 14 },
+                { label: '5-9', min: 5, max: 9 },
+                { label: '0-4', min: 0, max: 4 }
+            ];
+
+            const pyramidData = ageGroups.map(group => {
+                let male = 0, female = 0;
+                filteredData.forEach(row => {
+                    const age = parseInt(row[ageKey]) || 0;
+                    const gender = (row[genderKey] || '').toUpperCase();
+                    
+                    if (age >= group.min && age <= group.max) {
+                        if (gender.includes('LAKI') || gender === 'L' || gender === 'PRIA') {
+                            male++;
+                        } else if (gender.includes('PEREMPUAN') || gender === 'P' || gender === 'WANITA') {
+                            female++;
+                        }
+                    }
+                });
+                return { label: group.label, male: male, female: female };
+            });
+
+            // Find max value for symmetric axis
+            const maxValue = Math.max(
+                ...pyramidData.map(d => Math.max(d.male, d.female))
+            );
+
+            if (pyramidChart) pyramidChart.destroy();
+            
+            const ctx = document.getElementById('pyramidChart').getContext('2d');
+            pyramidChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: pyramidData.map(d => d.label),
+                    datasets: [
+                        {
+                            label: 'Laki-laki',
+                            data: pyramidData.map(d => -d.male),
+                            backgroundColor: 'rgba(59, 130, 246, 0.8)',
+                            borderColor: 'rgb(59, 130, 246)',
+                            borderWidth: 1,
+                            borderRadius: 4,
+                            barPercentage: 0.9,
+                            categoryPercentage: 0.85
+                        },
+                        {
+                            label: 'Perempuan',
+                            data: pyramidData.map(d => d.female),
+                            backgroundColor: 'rgba(236, 72, 153, 0.8)',
+                            borderColor: 'rgb(236, 72, 153)',
+                            borderWidth: 1,
+                            borderRadius: 4,
+                            barPercentage: 0.9,
+                            categoryPercentage: 0.85
+                        }
+                    ]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: {
+                            stacked: true,
+                            min: -maxValue - 5,
+                            max: maxValue + 5,
+                            ticks: {
+                                callback: function(value) {
+                                    return Math.abs(value);
+                                },
+                                stepSize: Math.ceil(maxValue / 5)
+                            },
+                            grid: {
+                                color: 'rgba(0, 0, 0, 0.1)'
+                            }
+                        },
+                        y: {
+                            stacked: true,
+                            grid: {
+                                display: false
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                padding: 20,
+                                usePointStyle: true
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return `${context.dataset.label}: ${Math.abs(context.raw)}`;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Update Balita Chart
+        function updateBalitaChart() {
+            const rtKey = Object.keys(allData[0] || {}).find(k => k.toUpperCase() === 'RT') || 'RT';
+            const ageKey = getColumnKey(['USIA', 'UMUR', 'AGE']);
+            const genderKey = getColumnKey(['JENIS KELAMIN', 'JK', 'KELAMIN', 'GENDER']);
+            
+            const dataByRT = {};
+            filteredData.forEach(row => {
+                const rt = row[rtKey] || 'Unknown';
+                const age = parseInt(row[ageKey]) || 0;
+                const gender = (row[genderKey] || '').toUpperCase();
+                
+                // Balita: usia 0-5 tahun
+                if (age >= 0 && age <= 5) {
+                    if (!dataByRT[rt]) {
+                        dataByRT[rt] = { male: 0, female: 0 };
+                    }
+                    
+                    if (gender.includes('LAKI') || gender === 'L' || gender === 'PRIA') {
+                        dataByRT[rt].male++;
+                    } else if (gender.includes('PEREMPUAN') || gender === 'P' || gender === 'WANITA') {
+                        dataByRT[rt].female++;
+                    }
+                }
+            });
+
+            const labels = Object.keys(dataByRT).sort((a, b) => parseInt(a) - parseInt(b));
+            const maleData = labels.map(rt => dataByRT[rt].male);
+            const femaleData = labels.map(rt => dataByRT[rt].female);
+
+            if (balitaChart) balitaChart.destroy();
+            
+            const ctx = document.getElementById('balitaChart').getContext('2d');
+            balitaChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: labels.map(rt => `RT ${rt}`),
+                    datasets: [
+                        {
+                            label: 'Laki-laki',
+                            data: maleData,
+                            backgroundColor: 'rgba(59, 130, 246, 0.8)',
+                            borderColor: 'rgb(59, 130, 246)',
+                            borderWidth: 1,
+                            borderRadius: 4
+                        },
+                        {
+                            label: 'Perempuan',
+                            data: femaleData,
+                            backgroundColor: 'rgba(236, 72, 153, 0.8)',
+                            borderColor: 'rgb(236, 72, 153)',
+                            borderWidth: 1,
+                            borderRadius: 4
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                stepSize: 1
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            position: 'bottom'
+                        }
+                    }
+                }
+            });
+        }
+
+        // Update Sekolah dan Remaja Chart (Usia 6-18 tahun)
+        function updateSekolahRemajaChart() {
+            const rtKey = Object.keys(allData[0] || {}).find(k => k.toUpperCase() === 'RT') || 'RT';
+            const ageKey = getColumnKey(['USIA', 'UMUR', 'AGE']);
+            const genderKey = getColumnKey(['JENIS KELAMIN', 'JK', 'KELAMIN', 'GENDER']);
+            
+            const dataByRT = {};
+            filteredData.forEach(row => {
+                const rt = row[rtKey] || 'Unknown';
+                const age = parseInt(row[ageKey]) || 0;
+                const gender = (row[genderKey] || '').toUpperCase();
+                
+                if (age >= 6 && age <= 18) {
+                    if (!dataByRT[rt]) {
+                        dataByRT[rt] = { male: 0, female: 0 };
+                    }
+                    
+                    if (gender.includes('LAKI') || gender === 'L' || gender === 'PRIA') {
+                        dataByRT[rt].male++;
+                    } else if (gender.includes('PEREMPUAN') || gender === 'P' || gender === 'WANITA') {
+                        dataByRT[rt].female++;
+                    }
+                }
+            });
+
+            const labels = Object.keys(dataByRT).sort((a, b) => parseInt(a) - parseInt(b));
+            const maleData = labels.map(rt => dataByRT[rt].male);
+            const femaleData = labels.map(rt => dataByRT[rt].female);
+
+            if (sekolahRemajaChart) sekolahRemajaChart.destroy();
+            
+            const ctx = document.getElementById('sekolahRemajaChart').getContext('2d');
+            sekolahRemajaChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: labels.map(rt => `RT ${rt}`),
+                    datasets: [
+                        {
+                            label: 'Laki-laki',
+                            data: maleData,
+                            backgroundColor: 'rgba(59, 130, 246, 0.8)',
+                            borderColor: 'rgb(59, 130, 246)',
+                            borderWidth: 1,
+                            borderRadius: 4
+                        },
+                        {
+                            label: 'Perempuan',
+                            data: femaleData,
+                            backgroundColor: 'rgba(236, 72, 153, 0.8)',
+                            borderColor: 'rgb(236, 72, 153)',
+                            borderWidth: 1,
+                            borderRadius: 4
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                stepSize: 1
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            position: 'bottom'
+                        }
+                    }
+                }
+            });
+        }
+
+        // Update Dewasa Chart (Usia 19-59 tahun)
+        function updateDewasaChart() {
+            const rtKey = Object.keys(allData[0] || {}).find(k => k.toUpperCase() === 'RT') || 'RT';
+            const ageKey = getColumnKey(['USIA', 'UMUR', 'AGE']);
+            const genderKey = getColumnKey(['JENIS KELAMIN', 'JK', 'KELAMIN', 'GENDER']);
+            
+            const dataByRT = {};
+            filteredData.forEach(row => {
+                const rt = row[rtKey] || 'Unknown';
+                const age = parseInt(row[ageKey]) || 0;
+                const gender = (row[genderKey] || '').toUpperCase();
+                
+                if (age >= 19 && age <= 59) {
+                    if (!dataByRT[rt]) {
+                        dataByRT[rt] = { male: 0, female: 0 };
+                    }
+                    
+                    if (gender.includes('LAKI') || gender === 'L' || gender === 'PRIA') {
+                        dataByRT[rt].male++;
+                    } else if (gender.includes('PEREMPUAN') || gender === 'P' || gender === 'WANITA') {
+                        dataByRT[rt].female++;
+                    }
+                }
+            });
+
+            const labels = Object.keys(dataByRT).sort((a, b) => parseInt(a) - parseInt(b));
+            const maleData = labels.map(rt => dataByRT[rt].male);
+            const femaleData = labels.map(rt => dataByRT[rt].female);
+
+            if (dewasaChart) dewasaChart.destroy();
+            
+            const ctx = document.getElementById('dewasaChart').getContext('2d');
+            dewasaChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: labels.map(rt => `RT ${rt}`),
+                    datasets: [
+                        {
+                            label: 'Laki-laki',
+                            data: maleData,
+                            backgroundColor: 'rgba(59, 130, 246, 0.8)',
+                            borderColor: 'rgb(59, 130, 246)',
+                            borderWidth: 1,
+                            borderRadius: 4
+                        },
+                        {
+                            label: 'Perempuan',
+                            data: femaleData,
+                            backgroundColor: 'rgba(236, 72, 153, 0.8)',
+                            borderColor: 'rgb(236, 72, 153)',
+                            borderWidth: 1,
+                            borderRadius: 4
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                stepSize: 1
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            position: 'bottom'
+                        }
+                    }
+                }
+            });
+        }
+
+        // Update Lansia Chart (Usia 60 tahun keatas)
+        function updateLansiaChart() {
+            const rtKey = Object.keys(allData[0] || {}).find(k => k.toUpperCase() === 'RT') || 'RT';
+            const ageKey = getColumnKey(['USIA', 'UMUR', 'AGE']);
+            const genderKey = getColumnKey(['JENIS KELAMIN', 'JK', 'KELAMIN', 'GENDER']);
+            
+            const dataByRT = {};
+            filteredData.forEach(row => {
+                const rt = row[rtKey] || 'Unknown';
+                const age = parseInt(row[ageKey]) || 0;
+                const gender = (row[genderKey] || '').toUpperCase();
+                
+                if (age >= 60) {
+                    if (!dataByRT[rt]) {
+                        dataByRT[rt] = { male: 0, female: 0 };
+                    }
+                    
+                    if (gender.includes('LAKI') || gender === 'L' || gender === 'PRIA') {
+                        dataByRT[rt].male++;
+                    } else if (gender.includes('PEREMPUAN') || gender === 'P' || gender === 'WANITA') {
+                        dataByRT[rt].female++;
+                    }
+                }
+            });
+
+            const labels = Object.keys(dataByRT).sort((a, b) => parseInt(a) - parseInt(b));
+            const maleData = labels.map(rt => dataByRT[rt].male);
+            const femaleData = labels.map(rt => dataByRT[rt].female);
+
+            if (lansiaChart) lansiaChart.destroy();
+            
+            const ctx = document.getElementById('lansiaChart').getContext('2d');
+            lansiaChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: labels.map(rt => `RT ${rt}`),
+                    datasets: [
+                        {
+                            label: 'Laki-laki',
+                            data: maleData,
+                            backgroundColor: 'rgba(59, 130, 246, 0.8)',
+                            borderColor: 'rgb(59, 130, 246)',
+                            borderWidth: 1,
+                            borderRadius: 4
+                        },
+                        {
+                            label: 'Perempuan',
+                            data: femaleData,
+                            backgroundColor: 'rgba(236, 72, 153, 0.8)',
+                            borderColor: 'rgb(236, 72, 153)',
+                            borderWidth: 1,
+                            borderRadius: 4
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                stepSize: 1
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            position: 'bottom'
+                        }
+                    }
+                }
+            });
+        }
+
+        // Update Wanita Usia Subur Chart (Perempuan Usia 15-49 tahun) - Line Chart dengan nilai
+        function updateWUSChart() {
+            const rtKey = Object.keys(allData[0] || {}).find(k => k.toUpperCase() === 'RT') || 'RT';
+            const ageKey = getColumnKey(['USIA', 'UMUR', 'AGE']);
+            const genderKey = getColumnKey(['JENIS KELAMIN', 'JK', 'KELAMIN', 'GENDER']);
+            
+            const dataByRT = {};
+            filteredData.forEach(row => {
+                const rt = row[rtKey] || 'Unknown';
+                const age = parseInt(row[ageKey]) || 0;
+                const gender = (row[genderKey] || '').toUpperCase();
+                
+                // Wanita Usia Subur: perempuan usia 15-49 tahun
+                if (age >= 15 && age <= 49) {
+                    if (!dataByRT[rt]) {
+                        dataByRT[rt] = { female: 0 };
+                    }
+                    
+                    if (gender.includes('PEREMPUAN') || gender === 'P' || gender === 'WANITA') {
+                        dataByRT[rt].female++;
+                    }
+                }
+            });
+
+            const labels = Object.keys(dataByRT).sort((a, b) => parseInt(a) - parseInt(b));
+            const femaleData = labels.map(rt => dataByRT[rt].female);
+
+            if (wusChart) wusChart.destroy();
+            
+            const ctx = document.getElementById('wusChart').getContext('2d');
+            wusChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: labels.map(rt => `RT ${rt}`),
+                    datasets: [
+                        {
+                            label: 'Perempuan',
+                            data: femaleData,
+                            backgroundColor: 'rgba(236, 72, 153, 0.2)',
+                            borderColor: 'rgb(236, 72, 153)',
+                            borderWidth: 3,
+                            fill: true,
+                            tension: 0.4,
+                            pointBackgroundColor: 'rgb(236, 72, 153)',
+                            pointBorderColor: '#fff',
+                            pointBorderWidth: 2,
+                            pointRadius: 6,
+                            pointHoverRadius: 8
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                stepSize: 1
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            position: 'bottom'
+                        },
+                        datalabels: {
+                            color: '#be185d',
+                            anchor: 'top',
+                            align: 'top',
+                            offset: 5,
+                            font: {
+                                weight: 'bold',
+                                size: 12
+                            },
+                            formatter: function(value) {
+                                return value;
+                            }
+                        }
+                    }
+                },
+                plugins: [ChartDataLabels]
+            });
+        }
+
+        // Update Pasangan Usia Subur Chart (Usia 15-49 tahun)
+        function updatePUSChart() {
+            const rtKey = Object.keys(allData[0] || {}).find(k => k.toUpperCase() === 'RT') || 'RT';
+            const ageKey = getColumnKey(['USIA', 'UMUR', 'AGE']);
+            const genderKey = getColumnKey(['JENIS KELAMIN', 'JK', 'KELAMIN', 'GENDER']);
+            
+            const dataByRT = {};
+            filteredData.forEach(row => {
+                const rt = row[rtKey] || 'Unknown';
+                const age = parseInt(row[ageKey]) || 0;
+                const gender = (row[genderKey] || '').toUpperCase();
+                
+                if (age >= 15 && age <= 49) {
+                    if (!dataByRT[rt]) {
+                        dataByRT[rt] = { male: 0, female: 0 };
+                    }
+                    
+                    if (gender.includes('LAKI') || gender === 'L' || gender === 'PRIA') {
+                        dataByRT[rt].male++;
+                    } else if (gender.includes('PEREMPUAN') || gender === 'P' || gender === 'WANITA') {
+                        dataByRT[rt].female++;
+                    }
+                }
+            });
+
+            const labels = Object.keys(dataByRT).sort((a, b) => parseInt(a) - parseInt(b));
+            const maleData = labels.map(rt => dataByRT[rt].male);
+            const femaleData = labels.map(rt => dataByRT[rt].female);
+
+            if (pusChart) pusChart.destroy();
+            
+            const ctx = document.getElementById('pusChart').getContext('2d');
+            pusChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: labels.map(rt => `RT ${rt}`),
+                    datasets: [
+                        {
+                            label: 'Laki-laki',
+                            data: maleData,
+                            backgroundColor: 'rgba(59, 130, 246, 0.8)',
+                            borderColor: 'rgb(59, 130, 246)',
+                            borderWidth: 1,
+                            borderRadius: 4
+                        },
+                        {
+                            label: 'Perempuan',
+                            data: femaleData,
+                            backgroundColor: 'rgba(236, 72, 153, 0.8)',
+                            borderColor: 'rgb(236, 72, 153)',
+                            borderWidth: 1,
+                            borderRadius: 4
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                stepSize: 1
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            position: 'bottom'
+                        }
+                    }
+                }
+            });
+        }
+
+        // Update Rekap Table
+        function updateRekapTable() {
+            const ageKey = getColumnKey(['USIA', 'UMUR', 'AGE']);
+            const genderKey = getColumnKey(['JENIS KELAMIN', 'JK', 'KELAMIN', 'GENDER']);
+            
+            // Calculate data for each category
+            const categories = [
+                { name: 'Jumlah Penduduk', minAge: 0, maxAge: 200, gender: 'all' },
+                { name: 'Balita (0-5 Tahun)', minAge: 0, maxAge: 5, gender: 'all' },
+                { name: 'Sekolah dan Remaja (6-18 Tahun)', minAge: 6, maxAge: 18, gender: 'all' },
+                { name: 'Dewasa (19-59 Tahun)', minAge: 19, maxAge: 59, gender: 'all' },
+                { name: 'Lansia (60 Tahun Keatas)', minAge: 60, maxAge: 200, gender: 'all' },
+                { name: 'Wanita Usia Subur (15-49 Tahun)', minAge: 15, maxAge: 49, gender: 'female' },
+                { name: 'Pasangan Usia Subur (15-49 Tahun)', minAge: 15, maxAge: 49, gender: 'all' }
+            ];
+
+            const rekapData = categories.map(cat => {
+                let male = 0, female = 0;
+                filteredData.forEach(row => {
+                    const age = parseInt(row[ageKey]) || 0;
+                    const gender = (row[genderKey] || '').toUpperCase();
+                    
+                    if (age >= cat.minAge && age <= cat.maxAge) {
+                        if (cat.gender === 'all' || cat.gender === 'male') {
+                            if (gender.includes('LAKI') || gender === 'L' || gender === 'PRIA') {
+                                male++;
+                            }
+                        }
+                        if (cat.gender === 'all' || cat.gender === 'female') {
+                            if (gender.includes('PEREMPUAN') || gender === 'P' || gender === 'WANITA') {
+                                female++;
+                            }
+                        }
+                    }
+                });
+                
+                // Untuk Wanita Usia Subur, total = perempuan saja
+                const total = cat.gender === 'female' ? female : male + female;
+                
+                return {
+                    name: cat.name,
+                    male: cat.gender === 'female' ? '-' : male,
+                    female: female,
+                    total: total
+                };
+            });
+
+            const rekapTableBody = document.getElementById('rekapTableBody');
+            rekapTableBody.innerHTML = '';
+            
+            rekapData.forEach((item, index) => {
+                const tr = document.createElement('tr');
+                tr.className = `${index % 2 === 0 ? 'bg-white' : 'bg-gray-50'} hover:bg-blue-50 transition-colors`;
+                const maleDisplay = item.male === '-' ? '-' : item.male.toLocaleString('id-ID');
+                const femaleDisplay = typeof item.female === 'number' ? item.female.toLocaleString('id-ID') : item.female;
+                const totalDisplay = typeof item.total === 'number' ? item.total.toLocaleString('id-ID') : item.total;
+                tr.innerHTML = `
+                    <td class="px-3 py-2 text-center text-xs border-b font-medium">${index + 1}</td>
+                    <td class="px-3 py-2 text-left text-xs border-b font-medium">${item.name}</td>
+                    <td class="px-3 py-2 text-center text-xs border-b font-bold text-blue-700">${totalDisplay}</td>
+                    <td class="px-3 py-2 text-center text-xs border-b font-semibold text-indigo-600">${maleDisplay}</td>
+                    <td class="px-3 py-2 text-center text-xs border-b font-semibold text-pink-600">${femaleDisplay}</td>
+                `;
+                rekapTableBody.appendChild(tr);
+            });
+        }
+
+        // Update table
+        function updateTable() {
+            const tableBody = document.getElementById('tableBody');
+            const rtKey = Object.keys(allData[0] || {}).find(k => k.toUpperCase() === 'RT') || 'RT';
+            const alamatKey = getColumnKey(['ALAMAT', 'ALAMAT RUMAH', 'ADDRESS']);
+            const nameKey = getColumnKey(['NAMA', 'NAMA LENGKAP', 'NAME']);
+            const genderKey = getColumnKey(['JENIS KELAMIN', 'JK', 'KELAMIN', 'GENDER']);
+            const tempatKey = getColumnKey(['TEMPAT', 'TEMPAT LAHIR', 'BIRTH PLACE']);
+            const tglLahirKey = getColumnKey(['TGL. LAHIR', 'TGL LAHIR', 'TANGGAL LAHIR', 'TGL.LAHIR', 'LAHIR']);
+            const hubKeluargaKey = getColumnKey(['HUB. KELUARGA*)', 'HUB. KELUARGA', 'HUB KELUARGA', 'HUBUNGAN']);
+
+            const startIndex = (currentPage - 1) * itemsPerPage;
+            const endIndex = Math.min(startIndex + itemsPerPage, filteredData.length);
+            const pageData = filteredData.slice(startIndex, endIndex);
+
+            tableBody.innerHTML = '';
+            pageData.forEach((row, index) => {
+                const hubKeluarga = row[hubKeluargaKey] || '';
+                const isKK = hubKeluarga.toUpperCase() === 'KEPALA KELUARGA';
+                const tr = document.createElement('tr');
+                tr.className = `${index % 2 === 0 ? 'bg-white' : 'bg-gray-50'} ${isKK ? 'table-row-kk' : ''} hover:bg-blue-50 transition-colors`;
+                
+                tr.innerHTML = `
+                    <td class="px-1.5 py-1 text-center text-xs border-b whitespace-nowrap">${startIndex + index + 1}</td>
+                    <td class="px-1.5 py-1 text-center text-xs border-b whitespace-nowrap">${row[rtKey] || '-'}</td>
+                    <td class="px-1.5 py-1 text-center text-xs border-b">${row[alamatKey] || '-'}</td>
+                    <td class="px-1.5 py-1 text-left text-xs border-b font-medium">${row[nameKey] || '-'}</td>
+                    <td class="px-1.5 py-1 text-center text-xs border-b whitespace-nowrap">${row[genderKey] || '-'}</td>
+                    <td class="px-1.5 py-1 text-center text-xs border-b">${row[tempatKey] || '-'}</td>
+                    <td class="px-1.5 py-1 text-center text-xs border-b whitespace-nowrap">${formatDate(row[tglLahirKey])}</td>
+                    <td class="px-1.5 py-1 text-center text-xs border-b">${hubKeluarga || '-'}</td>
+                `;
+                tableBody.appendChild(tr);
+            });
+
+            updatePagination();
+        }
+
+        // Update pagination
+        function updatePagination() {
+            const totalPages = Math.ceil(filteredData.length / itemsPerPage);
+            const startIndex = (currentPage - 1) * itemsPerPage + 1;
+            const endIndex = Math.min(currentPage * itemsPerPage, filteredData.length);
+
+            document.getElementById('pageInfo').textContent = 
+                `Menampilkan ${filteredData.length > 0 ? startIndex : 0} - ${endIndex} dari ${filteredData.length} data`;
+
+            document.getElementById('prevBtn').disabled = currentPage === 1;
+            document.getElementById('nextBtn').disabled = currentPage === totalPages || totalPages === 0;
+
+            const pageNumbers = document.getElementById('pageNumbers');
+            pageNumbers.innerHTML = '';
+            
+            const maxVisiblePages = 5;
+            let startPage = Math.max(1, currentPage - Math.floor(maxVisiblePages / 2));
+            let endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
+            
+            if (endPage - startPage < maxVisiblePages - 1) {
+                startPage = Math.max(1, endPage - maxVisiblePages + 1);
+            }
+
+            for (let i = startPage; i <= endPage; i++) {
+                const btn = document.createElement('button');
+                btn.textContent = i;
+                btn.className = `px-2 py-1 rounded ${i === currentPage ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'} transition-all text-xs`;
+                btn.addEventListener('click', () => {
+                    currentPage = i;
+                    updateTable();
+                });
+                pageNumbers.appendChild(btn);
+            }
+        }
+
+        // Event listeners
+        document.getElementById('rtFilter').addEventListener('change', filterData);
+        document.getElementById('searchInput').addEventListener('input', filterData);
+        document.getElementById('prevBtn').addEventListener('click', () => {
+            if (currentPage > 1) {
+                currentPage--;
+                updateTable();
+            }
+        });
+        document.getElementById('nextBtn').addEventListener('click', () => {
+            const totalPages = Math.ceil(filteredData.length / itemsPerPage);
+            if (currentPage < totalPages) {
+                currentPage++;
+                updateTable();
+            }
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Login Modal Functionality
+        const loginModal = document.getElementById('loginModal');
+        const loginBackdrop = document.getElementById('loginBackdrop');
+        const closeLoginModal = document.getElementById('closeLoginModal');
+        const loginForm = document.getElementById('loginForm');
+        const loginError = document.getElementById('loginError');
+        const loginErrorText = document.getElementById('loginErrorText');
+        const togglePassword = document.getElementById('togglePassword');
+        const loginPassword = document.getElementById('loginPassword');
+
+        // Login credentials
+        const credentials = [
+            {
+                username: 'Bendahara',
+                password: 'Posbindu015',
+                page: 'laporanKeuangan'
+            },
+            {
+                username: 'Sekretaris',
+                password: 'PTMLansia015',
+                page: 'ptmLansia'
+            }
+        ];
+
+        // Show/hide pages
+        function showPage(page) {
+            const mainHeader = document.querySelector('header');
+            const heroSection = document.getElementById('beranda');
+            const mainContent = document.getElementById('data-kegiatan');
+            const mainFooter = document.getElementById('mainFooter');
+            const laporanKeuanganPage = document.getElementById('laporanKeuanganPage');
+            const ptmLansiaPage = document.getElementById('ptmLansiaPage');
+
+            // Hide all
+            mainHeader.classList.add('hidden');
+            heroSection.classList.add('hidden');
+            mainContent.classList.add('hidden');
+            mainFooter.classList.add('hidden');
+            laporanKeuanganPage.classList.add('hidden');
+            ptmLansiaPage.classList.add('hidden');
+
+            // Show selected page
+            if (page === 'laporanKeuangan') {
+                laporanKeuanganPage.classList.remove('hidden');
+            } else if (page === 'ptmLansia') {
+                ptmLansiaPage.classList.remove('hidden');
+            } else {
+                // Show main page
+                mainHeader.classList.remove('hidden');
+                heroSection.classList.remove('hidden');
+                mainContent.classList.remove('hidden');
+                mainFooter.classList.remove('hidden');
+            }
+
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Logout function
+        function logout() {
+            showPage('main');
+        }
+
+        // Open login modal
+        document.querySelectorAll('.btn-3d').forEach(btn => {
+            if (btn.textContent.includes('Login') || btn.textContent.includes('Masuk')) {
+                btn.addEventListener('click', (e) => {
+                    if (!btn.closest('#loginForm')) {
+                        e.preventDefault();
+                        openLoginModal();
+                    }
+                });
+            }
+        });
+
+        function openLoginModal() {
+            loginModal.classList.remove('hidden');
+            loginModal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+            document.getElementById('loginUsername').focus();
+        }
+
+        function closeLoginModalFn() {
+            loginModal.classList.add('hidden');
+            loginModal.classList.remove('flex');
+            document.body.style.overflow = '';
+            loginForm.reset();
+            loginError.classList.add('hidden');
+        }
+
+        // Close modal events
+        closeLoginModal.addEventListener('click', closeLoginModalFn);
+        loginBackdrop.addEventListener('click', closeLoginModalFn);
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !loginModal.classList.contains('hidden')) {
+                closeLoginModalFn();
+            }
+        });
+
+        // Toggle password visibility
+        togglePassword.addEventListener('click', () => {
+            const type = loginPassword.getAttribute('type') === 'password' ? 'text' : 'password';
+            loginPassword.setAttribute('type', type);
+            togglePassword.innerHTML = type === 'password' ? '<i class="fas fa-eye"></i>' : '<i class="fas fa-eye-slash"></i>';
+        });
+
+        // Handle login form submission
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const username = document.getElementById('loginUsername').value.trim();
+            const password = document.getElementById('loginPassword').value;
+
+            // Find matching credential
+            const user = credentials.find(cred => 
+                cred.username.toLowerCase() === username.toLowerCase() && 
+                cred.password === password
+            );
+
+            if (user) {
+                // Success - Show loading and navigate to page
+                loginError.classList.add('hidden');
+                
+                const submitBtn = loginForm.querySelector('button[type="submit"]');
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Mengalihkan...';
+                submitBtn.disabled = true;
+                
+                setTimeout(() => {
+                    closeLoginModalFn();
+                    submitBtn.innerHTML = '<i class="fas fa-sign-in-alt mr-2"></i> Masuk';
+                    submitBtn.disabled = false;
+                    
+                    // Navigate to internal page
+                    if (user.page) {
+                        showPage(user.page);
+                    }
+                }, 1000);
+            } else {
+                // Error
+                loginError.classList.remove('hidden');
+                loginError.classList.add('bg-red-50', 'border-red-200', 'text-red-600');
+                loginError.classList.remove('bg-green-50', 'border-green-200', 'text-green-600');
+                loginErrorText.innerHTML = '<i class="fas fa-exclamation-circle mr-2"></i>Username atau password salah';
+                
+                // Shake animation
+                loginForm.classList.add('animate-shake');
+                setTimeout(() => {
+                    loginForm.classList.remove('animate-shake');
+                }, 500);
+            }
+        });
+
+        // =====================
+        // LAPORAN KEUANGAN
+        // =====================
+        
+        let dataKeuangan = [];
+        const bulanNamaLengkap = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+
+        // Load data dari localStorage
+        function loadKeuanganData() {
+            const saved = localStorage.getItem('dataKeuangan');
+            if (saved) {
+                dataKeuangan = JSON.parse(saved);
+            }
+            updateTabelKeuangan();
+        }
+
+        // Save data ke localStorage
+        function saveKeuanganData() {
+            localStorage.setItem('dataKeuangan', JSON.stringify(dataKeuangan));
+            // Update tabel keuangan di Beranda juga
+            updateTabelKeuanganBeranda();
+        }
+
+        // Format currency
+        function formatRupiah(angka) {
+            return 'Rp ' + angka.toLocaleString('id-ID');
+        }
+
+        // Format input rupiah otomatis
+        function formatInputRupiah(input) {
+            let value = input.value.replace(/\D/g, '');
+            if (value === '') {
+                input.value = '';
+                return;
+            }
+            const number = parseInt(value);
+            input.value = 'Rp ' + number.toLocaleString('id-ID');
+        }
+
+        // Parse rupiah string ke number
+        function parseRupiah(str) {
+            if (!str) return 0;
+            return parseInt(str.replace(/\D/g, '')) || 0;
+        }
+
+        // Hapus transaksi
+        function hapusTransaksi(id) {
+            if (confirm('Apakah Anda yakin ingin menghapus transaksi ini?')) {
+                dataKeuangan = dataKeuangan.filter(item => item.id !== id);
+                saveKeuanganData();
+                updateTabelKeuangan();
+            }
+        }
+
+        // Format tanggal untuk tampilan DD Mmm Year
+        function formatTanggalKeuangan(dateStr) {
+            if (!dateStr) return '-';
+            const date = new Date(dateStr);
+            if (isNaN(date.getTime())) return dateStr;
+            const day = date.getDate();
+            const month = monthNames[date.getMonth()];
+            const year = date.getFullYear();
+            return `${day} ${month} ${year}`;
+        }
+
+        // Format tanggal PTM untuk tampilan DD Mmm YYYY
+        function formatTanggalPTM(dateStr) {
+            if (!dateStr) return '-';
+            const date = new Date(dateStr);
+            if (isNaN(date.getTime())) return dateStr;
+            const day = date.getDate();
+            const month = monthNames[date.getMonth()];
+            const year = date.getFullYear();
+            return `${day} ${month} ${year}`;
+        }
+
+        // Update tabel keuangan
+        function updateTabelKeuangan() {
+            const bulan = parseInt(document.getElementById('filterBulan')?.value || new Date().getMonth() + 1);
+            const tahun = parseInt(document.getElementById('filterTahun')?.value || new Date().getFullYear());
+            
+            // Update label periode
+            const periodeLabel = document.getElementById('periodeLabel');
+            if (periodeLabel) {
+                periodeLabel.textContent = `Periode: ${bulanNamaLengkap[bulan - 1]} ${tahun}`;
+            }
+
+            // Filter data berdasarkan bulan dan tahun
+            const dataFiltered = dataKeuangan.filter(item => {
+                const date = new Date(item.tanggal);
+                return date.getMonth() + 1 === bulan && date.getFullYear() === tahun;
+            }).sort((a, b) => new Date(a.tanggal) - new Date(b.tanggal));
+
+            // Hitung saldo bulan sebelumnya
+            let saldoSebelumnya = 0;
+            dataKeuangan.forEach(item => {
+                const date = new Date(item.tanggal);
+                const itemBulan = date.getMonth() + 1;
+                const itemTahun = date.getFullYear();
+                
+                if (itemTahun < tahun || (itemTahun === tahun && itemBulan < bulan)) {
+                    if (item.jenis === 'pendapatan') {
+                        saldoSebelumnya += item.jumlah;
+                    } else {
+                        saldoSebelumnya -= item.jumlah;
+                    }
+                }
+            });
+
+            // Hitung total pendapatan dan pengeluaran bulan ini
+            let totalPendapatan = 0;
+            let totalPengeluaran = 0;
+            dataFiltered.forEach(item => {
+                if (item.jenis === 'pendapatan') {
+                    totalPendapatan += item.jumlah;
+                } else {
+                    totalPengeluaran += item.jumlah;
+                }
+            });
+
+            const saldoBulanIni = saldoSebelumnya + totalPendapatan - totalPengeluaran;
+
+            // Update ringkasan
+            const elSaldoSebelumnya = document.getElementById('saldoSebelumnya');
+            const elTotalPendapatan = document.getElementById('totalPendapatan');
+            const elTotalPengeluaran = document.getElementById('totalPengeluaran');
+            const elSaldoBulanIni = document.getElementById('saldoBulanIni');
+            
+            if (elSaldoSebelumnya) elSaldoSebelumnya.textContent = formatRupiah(saldoSebelumnya);
+            if (elTotalPendapatan) elTotalPendapatan.textContent = formatRupiah(totalPendapatan);
+            if (elTotalPengeluaran) elTotalPengeluaran.textContent = formatRupiah(totalPengeluaran);
+            if (elSaldoBulanIni) elSaldoBulanIni.textContent = formatRupiah(saldoBulanIni);
+
+            // Update tabel
+            const tbody = document.getElementById('tbodyKeuangan');
+            if (!tbody) return;
+
+            if (dataFiltered.length === 0) {
+                tbody.innerHTML = `
+                    <tr class="bg-white">
+                        <td colspan="6" class="px-4 py-8 text-center text-gray-500">Belum ada data transaksi untuk periode ini</td>
+                    </tr>
+                `;
+                return;
+            }
+
+            tbody.innerHTML = '';
+            dataFiltered.forEach((item, index) => {
+                const tr = document.createElement('tr');
+                tr.className = index % 2 === 0 ? 'bg-white' : 'bg-gray-50 print-row-alt';
+                tr.innerHTML = `
+                    <td class="px-4 py-3 text-center text-sm border-b">${index + 1}</td>
+                    <td class="px-4 py-3 text-center text-sm border-b whitespace-nowrap">${formatTanggalKeuangan(item.tanggal)}</td>
+                    <td class="px-4 py-3 text-left text-sm border-b">${item.uraian}</td>
+                    <td class="px-4 py-3 text-right text-sm border-b text-green-600 font-semibold">${item.jenis === 'pendapatan' ? formatRupiah(item.jumlah) : '-'}</td>
+                    <td class="px-4 py-3 text-right text-sm border-b text-red-600 font-semibold">${item.jenis === 'pengeluaran' ? formatRupiah(item.jumlah) : '-'}</td>
+                    <td class="px-4 py-3 text-center text-sm border-b no-print">
+                        <button onclick="hapusTransaksi(${item.id})" class="text-red-500 hover:text-red-700 transition-colors" title="Hapus">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        // Submit form keuangan
+        document.getElementById('formKeuangan')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const tanggal = document.getElementById('inputTanggal').value;
+            const uraian = document.getElementById('inputUraian').value;
+            const jenis = document.getElementById('inputJenis').value;
+            const jumlahStr = document.getElementById('inputJumlah').value;
+            const jumlah = parseRupiah(jumlahStr);
+
+            if (!tanggal || !uraian || !jenis || jumlah <= 0) {
+                alert('Harap lengkapi semua field dengan benar!');
+                return;
+            }
+
+            dataKeuangan.push({
+                id: Date.now(),
+                tanggal,
+                uraian,
+                jenis,
+                jumlah
+            });
+
+            saveKeuanganData();
+            
+            // Reset form
+            this.reset();
+            
+            // Set filter ke bulan yang baru diinput
+            const date = new Date(tanggal);
+            document.getElementById('filterBulan').value = date.getMonth() + 1;
+            document.getElementById('filterTahun').value = date.getFullYear();
+            updateTabelKeuangan();
+
+            alert('Data berhasil disimpan!');
+        });
+
+        // Filter change
+        document.getElementById('filterBulan')?.addEventListener('change', updateTabelKeuangan);
+        document.getElementById('filterTahun')?.addEventListener('change', updateTabelKeuangan);
+
+        // Refresh keuangan
+        function refreshKeuangan() {
+            document.getElementById('formKeuangan')?.reset();
+            updateTabelKeuangan();
+        }
+
+        // Print laporan keuangan
+        function printLaporanKeuangan() {
+            // Tampilkan tanda tangan sebelum print
+            const tandaTangan = document.getElementById('tandaTangan');
+            if (tandaTangan) {
+                tandaTangan.classList.remove('hidden');
+                tandaTangan.classList.add('grid');
+            }
+            
+            window.print();
+            
+            // Sembunyikan kembali setelah print
+            setTimeout(() => {
+                if (tandaTangan) {
+                    tandaTangan.classList.add('hidden');
+                    tandaTangan.classList.remove('grid');
+                }
+            }, 500);
+        }
+
+        // Initialize filter dengan bulan dan tahun saat ini
+        function initKeuanganFilters() {
+            const now = new Date();
+            const filterBulan = document.getElementById('filterBulan');
+            const filterTahun = document.getElementById('filterTahun');
+            
+            if (filterBulan) filterBulan.value = now.getMonth() + 1;
+            if (filterTahun) filterTahun.value = now.getFullYear();
+        }
+
+        // =====================
+        // PTM LANSIA
+        // =====================
+        
+        let dataPTM = [];
+
+        // Populate datalist nama dari data CSV
+        function populatePTMNamaDropdown() {
+            const datalist = document.getElementById('namaDatalist');
+            if (!datalist || allData.length === 0) return;
+            
+            const nameKey = getColumnKey(['NAMA', 'NAMA LENGKAP', 'NAME']);
+            
+            // Get semua nama dan sort A-Z
+            const names = allData.map(row => ({
+                nama: row[nameKey] || '',
+                data: row
+            })).filter(item => item.nama).sort((a, b) => a.nama.localeCompare(b.nama));
+            
+            datalist.innerHTML = '';
+            names.forEach((item) => {
+                const option = document.createElement('option');
+                option.value = item.nama;
+                datalist.appendChild(option);
+            });
+            
+            // Simpan data untuk referensi
+            window.ptmDataList = names;
+        }
+
+        // Search dan fill data PTM berdasarkan nama yang diketik
+        function searchAndFillPTMData() {
+            const namaInput = document.getElementById('ptmNama');
+            const namaValue = namaInput.value.trim().toUpperCase();
+            const nikInput = document.getElementById('ptmNIK');
+            const tglLahirInput = document.getElementById('ptmTglLahir');
+            const alamatInput = document.getElementById('ptmAlamat');
+            const rtInput = document.getElementById('ptmRT');
+            
+            if (!window.ptmDataList || namaValue === '') {
+                // Reset fields jika kosong
+                nikInput.value = '';
+                tglLahirInput.value = '';
+                alamatInput.value = '';
+                rtInput.value = '';
+                
+                // Set editable
+                setFieldsEditable(true);
+                return;
+            }
+            
+            // Cari nama yang cocok (exact match, case insensitive)
+            const matchedData = window.ptmDataList.find(item => 
+                item.nama.toUpperCase() === namaValue
+            );
+            
+            if (matchedData) {
+                // Nama ditemukan - isi field otomatis dan readonly
+                const nikKey = getColumnKey(['NIK', 'NO KTP', 'NO. KTP']);
+                const tglLahirKey = getColumnKey(['TGL. LAHIR', 'TGL LAHIR', 'TANGGAL LAHIR', 'TGL.LAHIR', 'LAHIR']);
+                const alamatKey = getColumnKey(['ALAMAT', 'ALAMAT RUMAH', 'ADDRESS']);
+                const rtKey = Object.keys(allData[0] || {}).find(k => k.toUpperCase() === 'RT') || 'RT';
+                
+                nikInput.value = matchedData.data[nikKey] || '';
+                tglLahirInput.value = formatDate(matchedData.data[tglLahirKey]) || '';
+                alamatInput.value = matchedData.data[alamatKey] || '';
+                rtInput.value = matchedData.data[rtKey] || '';
+                
+                // Set readonly
+                setFieldsEditable(false);
+            } else {
+                // Nama tidak ditemukan - biarkan user input manual
+                setFieldsEditable(true);
+            }
+        }
+        
+        // Set fields editable atau readonly
+        function setFieldsEditable(editable) {
+            const nikInput = document.getElementById('ptmNIK');
+            const tglLahirInput = document.getElementById('ptmTglLahir');
+            const alamatInput = document.getElementById('ptmAlamat');
+            const rtInput = document.getElementById('ptmRT');
+            
+            if (editable) {
+                nikInput.readOnly = false;
+                nikInput.classList.remove('bg-gray-100');
+                nikInput.classList.add('bg-white');
+                
+                tglLahirInput.readOnly = false;
+                tglLahirInput.classList.remove('bg-gray-100');
+                tglLahirInput.classList.add('bg-white');
+                
+                alamatInput.readOnly = false;
+                alamatInput.classList.remove('bg-gray-100');
+                alamatInput.classList.add('bg-white');
+                
+                rtInput.readOnly = false;
+                rtInput.classList.remove('bg-gray-100');
+                rtInput.classList.add('bg-white');
+            } else {
+                nikInput.readOnly = true;
+                nikInput.classList.add('bg-gray-100');
+                nikInput.classList.remove('bg-white');
+                
+                tglLahirInput.readOnly = true;
+                tglLahirInput.classList.add('bg-gray-100');
+                tglLahirInput.classList.remove('bg-white');
+                
+                alamatInput.readOnly = true;
+                alamatInput.classList.add('bg-gray-100');
+                alamatInput.classList.remove('bg-white');
+                
+                rtInput.readOnly = true;
+                rtInput.classList.add('bg-gray-100');
+                rtInput.classList.remove('bg-white');
+            }
+        }
+
+        // Load data PTM dari localStorage
+        function loadPTMData() {
+            const saved = localStorage.getItem('dataPTM');
+            if (saved) {
+                dataPTM = JSON.parse(saved);
+            }
+            populatePTMNamaDropdown();
+            updateTabelPTM();
+            updateTabelPTMBeranda();
+        }
+
+        // Save data PTM ke localStorage
+        function savePTMData() {
+            localStorage.setItem('dataPTM', JSON.stringify(dataPTM));
+            // Update tabel PTM di Beranda juga
+            updateTabelPTMBeranda();
+        }
+
+
+
+        // Hapus data PTM
+        function hapusPTM(id) {
+            if (confirm('Apakah Anda yakin ingin menghapus data ini?')) {
+                dataPTM = dataPTM.filter(item => item.id !== id);
+                savePTMData();
+                updateTabelPTM();
+            }
+        }
+
+        // Update tabel PTM
+        function updateTabelPTM() {
+            const bulan = parseInt(document.getElementById('filterBulanPTM')?.value || new Date().getMonth() + 1);
+            const tahun = parseInt(document.getElementById('filterTahunPTM')?.value || new Date().getFullYear());
+            
+            // Update label periode
+            const periodeLabel = document.getElementById('periodeLabelPTM');
+            if (periodeLabel) {
+                periodeLabel.textContent = `Periode: ${bulanNamaLengkap[bulan - 1]} ${tahun}`;
+            }
+
+            // Filter data berdasarkan bulan dan tahun
+            const dataFiltered = dataPTM.filter(item => {
+                const date = new Date(item.tanggal);
+                return date.getMonth() + 1 === bulan && date.getFullYear() === tahun;
+            }).sort((a, b) => new Date(a.tanggal) - new Date(b.tanggal));
+
+            // Update tabel
+            const tbody = document.getElementById('tbodyPTM');
+            if (!tbody) return;
+
+            if (dataFiltered.length === 0) {
+                tbody.innerHTML = `
+                    <tr class="bg-white">
+                        <td colspan="15" class="px-4 py-8 text-center text-gray-500">Belum ada data PTM untuk periode ini</td>
+                    </tr>
+                `;
+                return;
+            }
+
+            tbody.innerHTML = '';
+            dataFiltered.forEach((item, index) => {
+                const tr = document.createElement('tr');
+                tr.className = index % 2 === 0 ? 'bg-white' : 'bg-gray-50 print-row-alt';
+                
+                // Format tanggal pemeriksaan
+                const tglPemeriksaan = formatTanggalPTM(item.tanggal);
+                // Tanggal lahir sudah dalam format DD Mmm YYYY dari auto-fill
+                const tglLahirDisplay = item.tglLahir || '-';
+                
+                tr.innerHTML = `
+                    <td class="px-2 py-2 text-center text-xs border-b">${index + 1}</td>
+                    <td class="px-2 py-2 text-center text-xs border-b whitespace-nowrap">${tglPemeriksaan}</td>
+                    <td class="px-2 py-2 text-left text-xs border-b">${item.nama}</td>
+                    <td class="px-2 py-2 text-center text-xs border-b">${item.nik}</td>
+                    <td class="px-2 py-2 text-center text-xs border-b whitespace-nowrap">${tglLahirDisplay}</td>
+                    <td class="px-2 py-2 text-left text-xs border-b">${item.alamat}</td>
+                    <td class="px-2 py-2 text-center text-xs border-b">${item.rt}</td>
+                    <td class="px-2 py-2 text-center text-xs border-b">${item.td}</td>
+                    <td class="px-2 py-2 text-center text-xs border-b">${item.tb}</td>
+                    <td class="px-2 py-2 text-center text-xs border-b">${item.bb}</td>
+                    <td class="px-2 py-2 text-center text-xs border-b">${item.lp}</td>
+                    <td class="px-2 py-2 text-center text-xs border-b">${item.gds}</td>
+                    <td class="px-2 py-2 text-center text-xs border-b">${item.chol}</td>
+                    <td class="px-2 py-2 text-center text-xs border-b">${item.au}</td>
+                    <td class="px-2 py-2 text-center text-xs border-b no-print">
+                        <button onclick="hapusPTM(${item.id})" class="text-red-500 hover:text-red-700 transition-colors" title="Hapus">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        // Submit form PTM
+        document.getElementById('formPTM')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const namaInput = document.getElementById('ptmNama');
+            const nama = namaInput.value.trim();
+            
+            if (!nama) {
+                alert('Harap isi nama!');
+                return;
+            }
+
+            const newData = {
+                id: Date.now(),
+                tanggal: document.getElementById('ptmTanggal').value,
+                nama: nama,
+                nik: document.getElementById('ptmNIK').value,
+                tglLahir: document.getElementById('ptmTglLahir').value,
+                alamat: document.getElementById('ptmAlamat').value,
+                rt: document.getElementById('ptmRT').value,
+                td: document.getElementById('ptmTD').value,
+                tb: document.getElementById('ptmTB').value,
+                bb: document.getElementById('ptmBB').value,
+                lp: document.getElementById('ptmLP').value,
+                gds: document.getElementById('ptmGDS').value,
+                chol: document.getElementById('ptmCHOL').value,
+                au: document.getElementById('ptmAU').value
+            };
+
+            dataPTM.push(newData);
+            savePTMData();
+            
+            // Reset form
+            this.reset();
+            
+            // Reset fields
+            document.getElementById('ptmNIK').value = '';
+            document.getElementById('ptmTglLahir').value = '';
+            document.getElementById('ptmAlamat').value = '';
+            document.getElementById('ptmRT').value = '';
+            
+            // Set fields editable
+            setFieldsEditable(true);
+            
+            // Set filter ke bulan yang baru diinput
+            const date = new Date(newData.tanggal);
+            document.getElementById('filterBulanPTM').value = date.getMonth() + 1;
+            document.getElementById('filterTahunPTM').value = date.getFullYear();
+            updateTabelPTM();
+
+            alert('Data berhasil disimpan!');
+        });
+
+        // Filter change PTM
+        document.getElementById('filterBulanPTM')?.addEventListener('change', updateTabelPTM);
+        document.getElementById('filterTahunPTM')?.addEventListener('change', updateTabelPTM);
+
+        // Refresh PTM
+        function refreshPTM() {
+            document.getElementById('formPTM')?.reset();
+            
+            // Reset fields
+            document.getElementById('ptmNama').value = '';
+            document.getElementById('ptmNIK').value = '';
+            document.getElementById('ptmTglLahir').value = '';
+            document.getElementById('ptmAlamat').value = '';
+            document.getElementById('ptmRT').value = '';
+            
+            // Set fields editable
+            setFieldsEditable(true);
+            
+            updateTabelPTM();
+        }
+
+        // Print PTM Lansia
+        function printPTMLansia() {
+            // Tampilkan tanda tangan sebelum print
+            const tandaTangan = document.getElementById('tandaTanganPTM');
+            if (tandaTangan) {
+                tandaTangan.classList.remove('hidden');
+                tandaTangan.classList.add('grid');
+            }
+            
+            // Sembunyikan printArea keuangan, tampilkan printArea PTM
+            const printAreaKeuangan = document.getElementById('printArea');
+            const printAreaPTM = document.getElementById('printAreaPTM');
+            
+            if (printAreaKeuangan) printAreaKeuangan.id = 'printAreaKeuanganTemp';
+            if (printAreaPTM) printAreaPTM.id = 'printArea';
+            
+            window.print();
+            
+            // Kembalikan id
+            setTimeout(() => {
+                if (printAreaPTM) printAreaPTM.id = 'printAreaPTM';
+                if (printAreaKeuangan) printAreaKeuangan.id = 'printArea';
+                
+                if (tandaTangan) {
+                    tandaTangan.classList.add('hidden');
+                    tandaTangan.classList.remove('grid');
+                }
+            }, 500);
+        }
+
+        // Initialize filter PTM dengan bulan dan tahun saat ini
+        function initPTMFilters() {
+            const now = new Date();
+            const filterBulan = document.getElementById('filterBulanPTM');
+            const filterTahun = document.getElementById('filterTahunPTM');
+            const filterBulanBeranda = document.getElementById('filterBulanPTMBeranda');
+            const filterTahunBeranda = document.getElementById('filterTahunPTMBeranda');
+            
+            if (filterBulan) filterBulan.value = now.getMonth() + 1;
+            if (filterTahun) filterTahun.value = now.getFullYear();
+            if (filterBulanBeranda) filterBulanBeranda.value = now.getMonth() + 1;
+            if (filterTahunBeranda) filterTahunBeranda.value = now.getFullYear();
+        }
+
+        // Update tabel PTM di Beranda
+        function updateTabelPTMBeranda() {
+            const bulan = parseInt(document.getElementById('filterBulanPTMBeranda')?.value || new Date().getMonth() + 1);
+            const tahun = parseInt(document.getElementById('filterTahunPTMBeranda')?.value || new Date().getFullYear());
+            
+            // Filter data berdasarkan bulan dan tahun
+            const dataFiltered = dataPTM.filter(item => {
+                const date = new Date(item.tanggal);
+                return date.getMonth() + 1 === bulan && date.getFullYear() === tahun;
+            }).sort((a, b) => new Date(a.tanggal) - new Date(b.tanggal));
+
+            // Update tabel
+            const tbody = document.getElementById('tbodyPTMBeranda');
+            if (!tbody) return;
+
+            if (dataFiltered.length === 0) {
+                tbody.innerHTML = `
+                    <tr class="bg-white">
+                        <td colspan="14" class="px-4 py-8 text-center text-gray-500">Belum ada data PTM untuk periode ini</td>
+                    </tr>
+                `;
+                return;
+            }
+
+            tbody.innerHTML = '';
+            dataFiltered.forEach((item, index) => {
+                const tr = document.createElement('tr');
+                tr.className = index % 2 === 0 ? 'bg-white' : 'bg-gray-50';
+                
+                // Format tanggal pemeriksaan
+                const tglPemeriksaan = formatTanggalPTM(item.tanggal);
+                const tglLahirDisplay = item.tglLahir || '-';
+                
+                tr.innerHTML = `
+                    <td class="px-2 py-2 text-center text-xs border-b">${index + 1}</td>
+                    <td class="px-2 py-2 text-center text-xs border-b whitespace-nowrap">${tglPemeriksaan}</td>
+                    <td class="px-2 py-2 text-left text-xs border-b">${item.nama}</td>
+                    <td class="px-2 py-2 text-center text-xs border-b">${item.nik}</td>
+                    <td class="px-2 py-2 text-center text-xs border-b whitespace-nowrap">${tglLahirDisplay}</td>
+                    <td class="px-2 py-2 text-left text-xs border-b">${item.alamat}</td>
+                    <td class="px-2 py-2 text-center text-xs border-b">${item.rt}</td>
+                    <td class="px-2 py-2 text-center text-xs border-b">${item.td}</td>
+                    <td class="px-2 py-2 text-center text-xs border-b">${item.tb}</td>
+                    <td class="px-2 py-2 text-center text-xs border-b">${item.bb}</td>
+                    <td class="px-2 py-2 text-center text-xs border-b">${item.lp}</td>
+                    <td class="px-2 py-2 text-center text-xs border-b">${item.gds}</td>
+                    <td class="px-2 py-2 text-center text-xs border-b">${item.chol}</td>
+                    <td class="px-2 py-2 text-center text-xs border-b">${item.au}</td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        // Event listener untuk filter PTM di Beranda
+        document.getElementById('filterBulanPTMBeranda')?.addEventListener('change', updateTabelPTMBeranda);
+        document.getElementById('filterTahunPTMBeranda')?.addEventListener('change', updateTabelPTMBeranda);
+
+        // Update tabel Keuangan di Beranda
+        function updateTabelKeuanganBeranda() {
+            const bulan = parseInt(document.getElementById('filterBulanKeuanganBeranda')?.value || new Date().getMonth() + 1);
+            const tahun = parseInt(document.getElementById('filterTahunKeuanganBeranda')?.value || new Date().getFullYear());
+            
+            // Filter data berdasarkan bulan dan tahun
+            const dataFiltered = dataKeuangan.filter(item => {
+                const date = new Date(item.tanggal);
+                return date.getMonth() + 1 === bulan && date.getFullYear() === tahun;
+            }).sort((a, b) => new Date(a.tanggal) - new Date(b.tanggal));
+
+            // Hitung saldo bulan sebelumnya
+            let saldoSebelumnya = 0;
+            dataKeuangan.forEach(item => {
+                const date = new Date(item.tanggal);
+                const itemBulan = date.getMonth() + 1;
+                const itemTahun = date.getFullYear();
+                
+                if (itemTahun < tahun || (itemTahun === tahun && itemBulan < bulan)) {
+                    if (item.jenis === 'pendapatan') {
+                        saldoSebelumnya += item.jumlah;
+                    } else {
+                        saldoSebelumnya -= item.jumlah;
+                    }
+                }
+            });
+
+            // Hitung total pendapatan dan pengeluaran bulan ini
+            let totalPendapatan = 0;
+            let totalPengeluaran = 0;
+            dataFiltered.forEach(item => {
+                if (item.jenis === 'pendapatan') {
+                    totalPendapatan += item.jumlah;
+                } else {
+                    totalPengeluaran += item.jumlah;
+                }
+            });
+
+            const saldoBulanIni = saldoSebelumnya + totalPendapatan - totalPengeluaran;
+
+            // Update ringkasan
+            const elSaldoSebelumnya = document.getElementById('saldoSebelumnyaBeranda');
+            const elTotalPendapatan = document.getElementById('totalPendapatanBeranda');
+            const elTotalPengeluaran = document.getElementById('totalPengeluaranBeranda');
+            const elSaldoBulanIni = document.getElementById('saldoBulanIniBeranda');
+            
+            if (elSaldoSebelumnya) elSaldoSebelumnya.textContent = formatRupiah(saldoSebelumnya);
+            if (elTotalPendapatan) elTotalPendapatan.textContent = formatRupiah(totalPendapatan);
+            if (elTotalPengeluaran) elTotalPengeluaran.textContent = formatRupiah(totalPengeluaran);
+            if (elSaldoBulanIni) elSaldoBulanIni.textContent = formatRupiah(saldoBulanIni);
+
+            // Update tabel
+            const tbody = document.getElementById('tbodyKeuanganBeranda');
+            if (!tbody) return;
+
+            if (dataFiltered.length === 0) {
+                tbody.innerHTML = `
+                    <tr class="bg-white">
+                        <td colspan="5" class="px-4 py-8 text-center text-gray-500">Belum ada data transaksi untuk periode ini</td>
+                    </tr>
+                `;
+                return;
+            }
+
+            tbody.innerHTML = '';
+            dataFiltered.forEach((item, index) => {
+                const tr = document.createElement('tr');
+                tr.className = index % 2 === 0 ? 'bg-white' : 'bg-gray-50';
+                tr.innerHTML = `
+                    <td class="px-3 py-2 text-center text-xs border-b">${index + 1}</td>
+                    <td class="px-3 py-2 text-center text-xs border-b whitespace-nowrap">${formatTanggalKeuangan(item.tanggal)}</td>
+                    <td class="px-3 py-2 text-left text-xs border-b">${item.uraian}</td>
+                    <td class="px-3 py-2 text-right text-xs border-b text-green-600 font-semibold">${item.jenis === 'pendapatan' ? formatRupiah(item.jumlah) : '-'}</td>
+                    <td class="px-3 py-2 text-right text-xs border-b text-red-600 font-semibold">${item.jenis === 'pengeluaran' ? formatRupiah(item.jumlah) : '-'}</td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        // Event listener untuk filter Keuangan di Beranda
+        document.getElementById('filterBulanKeuanganBeranda')?.addEventListener('change', updateTabelKeuanganBeranda);
+        document.getElementById('filterTahunKeuanganBeranda')?.addEventListener('change', updateTabelKeuanganBeranda);
+
+        // Initialize filter Keuangan Beranda
+        function initKeuanganBerandaFilters() {
+            const now = new Date();
+            const filterBulan = document.getElementById('filterBulanKeuanganBeranda');
+            const filterTahun = document.getElementById('filterTahunKeuanganBeranda');
+            
+            if (filterBulan) filterBulan.value = now.getMonth() + 1;
+            if (filterTahun) filterTahun.value = now.getFullYear();
+        }
+
+        // Initialize
+        fetchData();
+        initKeuanganFilters();
+        initKeuanganBerandaFilters();
+        loadKeuanganData();
+        initPTMFilters();
+        loadPTMData();
+        updateTabelPTMBeranda();
+        updateTabelKeuanganBeranda();
+    </script>
+</body>
+</html>
